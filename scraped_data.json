@@ -1,0 +1,63 @@
+{
+  "teachers": [
+    {
+      "name": "Thầy Bạch Hiến",
+      "role": "Tin học văn phòng &amp; AI",
+      "bio": "Chuyên gia đào tạo tin học và ứng dụng AI cho cá nhân, doanh nghiệp. Phương pháp giảng dạy thực tế, dễ hiểu, giúp học viên áp dụng ngay vào công việc.",
+      "exp": "12 năm kinh nghiệm",
+      "photo": "https://blogdaytinhoc.com/images/giao-vien/thay-bach-hien-giao-vien-day-tin-hoc-va-ung-dung-ai.jpg"
+    },
+    {
+      "name": "Cô Thiều Hồng",
+      "role": "Kế toán thực hành",
+      "bio": "Từng có 10 năm giữ chức vụ Kế toán trưởng doanh nghiệp, hướng dẫn kế toán thuế &amp; tổng hợp thực tế.",
+      "exp": "10 năm kinh nghiệm",
+      "photo": "https://blogdaytinhoc.com/images/giao-vien/co-thieu-hong-giao-vien-dao-tao-ke-toan.jpg"
+    },
+    {
+      "name": "Thầy Đinh Đăng",
+      "role": "Vẽ Kế Kỹ Thuật",
+      "bio": "chuyên đào tạo các phần mềm thiết kế bản vẽ kỹ thuật AutoCAD, SketchUp, SolidWorks, CNC; là kỹ sư có nhiều năm kinh nghiệm với dự án thực tế.",
+      "exp": "11 năm kinh nghiệm",
+      "photo": "https://blogdaytinhoc.com/images/giao-vien/thay-dinh-dang-giao-vien-dao-tao-thiet-ke-ban-ve-ky-thuat.jpg"
+    },
+    {
+      "name": "Cô Lệ Linh",
+      "role": "Thiết kế đồ họa",
+      "bio": "Designer thực chiến với Photoshop, Illustrator, CorelDraw và Canva. Phương châm giảng dạy sáng tạo, giúp học viên phát triển tư duy thiết kế và kỹ năng thực hành.",
+      "exp": "8 năm kinh nghiệm",
+      "photo": "https://blogdaytinhoc.com/images/giao-vien/co-le-linh-giao-vien-day-thiet-ke-do-hoa.jpg"
+    },
+    {
+      "name": "Thầy Hùng Trần",
+      "role": "Lập trình &amp; Tin học trẻ em",
+      "bio": "Chuyên gia đào tạo lập trình Python, Scratch, C++ và tư duy lập trình cho học sinh các cấp. Với phương châm: &quot;Chuyên Nghiệp - Tận Tâm - Học thành nghề&quot;.",
+      "exp": "6 năm kinh nghiệm",
+      "photo": "https://blogdaytinhoc.com/images/giao-vien/thay-hung-tran-giao-vien-dao-tao-lap-trinh-tin-hoc-tre-em.jpg"
+    },
+    {
+      "name": "Cô Thảo Hoa",
+      "role": "Tin học Quốc tế MOS/IC3",
+      "bio": "Luyện thi chứng chỉ MOS Specialist, MOS Expert, IC3. Học viên đạt kết quả cao trong các kỳ thi (Trên 900 điểm).",
+      "exp": "7 năm kinh nghiệm",
+      "photo": "https://blogdaytinhoc.com/images/giao-vien/co-thao-hoa-giao-vien-luyen-thi-mos-ic3.jpg"
+    }
+  ],
+  "testimonials": [],
+  "courses": [],
+  "locations": [
+    "1 Tp.HCM: Tầng 1, Số 193 Đ. Nguyễn Xí, P Bình Thạnh, TP Hồ Chí Minh - (Quận Bình Thạnh cũ)",
+    "2 Tp.HCM: Căn hộ Florita Quận 7, Khu đô thị Him Lam, Phường Tân Hưng - (Quận 7 cũ)",
+    "3 Tp.HCM: Phòng TM-0.39, 510 Kinh Dương Vương, phường An Lạc - (Tòa nhà Moonlight Boulevard, Giáp Quận 6 và Quận Bình Tân cũ)",
+    "4 Tp.HCM: A23 Lê Thị Riêng, KDC Thới An, phường Thới An - (Quận 12 cũ)",
+    "5 Tp.HCM (Thủ Đức, Q9): 133/2 Đ. Đỗ Xuân Hợp, Phường Phước Long, Tp.Thủ Đức - (Quận 9 cũ)",
+    "6 Tp.HCM: Căn hộ 1.22 CC Ruby (Tầng trệt), 2A Nguyễn Sỹ Sách, phường Tân Sơn - (Quận Tân Bình cũ)",
+    "7 Thủ Dầu Một, Bình Dương: Số 107, D5, KDC Phú Hòa 1, Khu 4, Phường Thủ Dầu Một, Thành phố Hồ Chí Minh - (TP. Thủ Dầu Một -Bình Dương cũ)",
+    "8 Thuận An, Bình Dương: 8 Đường NA8, Khu Dân Cư Viet Sing, phường Thuận Giao, Thành phố Hồ Chí Minh - (TP. Thuận An - Bình Dương cũ)",
+    "9 Dĩ An, Bình Dương: 184/19/11 Đặng Văn Mây, KP Đông Chiêu, Phường Dĩ An, Thành phố Hồ Chí Minh - (TP. Dĩ An - Bình Dương cũ)",
+    "10 Tân Uyên, Bình Dương: 20 đường ĐX 12, Phường Tân Khánh, TP. Hồ Chí Minh - (TP. Tân Uyên - Bình Dương cũ)",
+    "11 Biên Hòa, Đồng Nai: 91 Đoàn Văn Cự, phường Tam Hiệp, TP. Đồng Nai - (TP. Biên Hòa - Đồng Nai cũ)",
+    "12 Long Thành, Đồng Nai: 72 Đinh Bộ Lĩnh, phường Long Thành, TP. Đồng Nai - (Huyện Long Thành - Đồng Nai cũ)",
+    "13 Bà Rịa - Vũng Tàu: 293 Bình Giã, phường Tam Thắng, Thành phố Hồ Chí Minh - (TP. Bà Rịa - Vũng Tàu cũ)"
+  ]
+}

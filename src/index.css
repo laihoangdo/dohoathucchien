@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+:root {
+  --sv-blue: #0265ff;
+  --sv-blue-dark: #0053d3;
+  --sv-red: #b30000;
+  --sv-ink: #0f172a;
+  --sv-muted: #475569;
+  --sv-surface: #ffffff;
+  --sv-bg: #f4f7ff;
+  --sv-ring: rgba(2, 101, 255, 0.14);
+  --sv-shadow: 0 14px 34px -16px rgba(2, 101, 255, 0.45);
+  --sv-radius: 16px;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  color: var(--sv-ink);
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Callout and article typography */
+.callout-box {
+  padding: 16px 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  border-left: 4px solid var(--sv-blue);
+  background: #f0f6ff;
+}
+
+.callout-box.info {
+  border-left-color: #0265ff;
+  background: #f0f6ff;
+}
+
+.callout-box.tip {
+  border-left-color: #10b981;
+  background: #f0fdf4;
+}
+
+.callout-box.download {
+  border-left-color: #f59e0b;
+  background: #fffbeb;
+  text-align: center;
+}
+
+.btn-sv-download {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 24px;
+  background: #b30000;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-sv-download:hover {
+  background: #d90429;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(179, 0, 0, 0.25);
+}
+
+.table-styled {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.table-styled th {
+  background: #0265ff;
+  color: #ffffff;
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  border: 1px solid #0053d3;
+}
+
+.table-styled td {
+  padding: 12px 16px;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+}
+
+.table-styled tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+/* Phone pulsing widget animation */
+@keyframes alo-circle-anim {
+  0% { transform: rotate(0) scale(0.5) skew(1deg); opacity: 0.1; }
+  30% { transform: rotate(0) scale(0.7) skew(1deg); opacity: 0.5; }
+  100% { transform: rotate(0) scale(1) skew(1deg); opacity: 0; }
+}
+
+@keyframes alo-circle-fill-anim {
+  0% { transform: rotate(0) scale(0.7) skew(1deg); opacity: 0.6; }
+  50% { transform: rotate(0) scale(1) skew(1deg); opacity: 0.8; }
+  100% { transform: rotate(0) scale(0.7) skew(1deg); opacity: 0.6; }
+}
+
+@keyframes alo-circle-img-anim {
+  0% { transform: rotate(0) scale(1) skew(1deg); }
+  10% { transform: rotate(-25deg) scale(1) skew(1deg); }
+  20% { transform: rotate(25deg) scale(1) skew(1deg); }
+  30% { transform: rotate(-25deg) scale(1) skew(1deg); }
+  40% { transform: rotate(25deg) scale(1) skew(1deg); }
+  50% { transform: rotate(0) scale(1) skew(1deg); }
+  100% { transform: rotate(0) scale(1) skew(1deg); }
+}
+
+.phonering-alo-ph-circle {
+  animation: alo-circle-anim 1.2s infinite ease-in-out;
+  transform-origin: 50% 50%;
+}
+
+.phonering-alo-ph-circle-fill {
+  animation: alo-circle-fill-anim 2.3s infinite ease-in-out;
+  transform-origin: 50% 50%;
+}
+
+.phonering-alo-ph-img-circle {
+  animation: alo-circle-img-anim 1s infinite ease-in-out;
+  transform-origin: 50% 50%;
+}
+

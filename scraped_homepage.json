@@ -1,0 +1,528 @@
+{
+  "courses": [
+    {
+      "tab": "tab1",
+      "href": "https://blogdaytinhoc.com/danh-muc/tin-hoc-van-phong-ung-dung",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/tin-hoc-van-phong-ung-dung.jpg",
+      "alt": "Khóa học tin học văn phòng ứng dụng",
+      "title": "Tin Học Văn Phòng Ứng Dụng"
+    },
+    {
+      "tab": "tab1",
+      "href": "https://blogdaytinhoc.com/danh-muc/tin-hoc-van-phong-ung-dung-truc-tuyen",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/tin-hoc-van-phong-ung-dung-truc-tuyen.jpg",
+      "alt": "Tin Học Văn Phòng Ứng dụng Trực Tuyến",
+      "title": "Tin Học Văn Phòng Ứng Dụng Trực Tuyến"
+    },
+    {
+      "tab": "tab1",
+      "href": "https://blogdaytinhoc.com/danh-muc/thuc-hanh-tin-hoc-van-phong",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/thuc-hanh-tin-hoc-van-phong.jpg",
+      "alt": "Khóa học thực hành tin học văn phòng",
+      "title": "Thực Hành Tin Học Văn Phòng"
+    },
+    {
+      "tab": "tab1",
+      "href": "https://blogdaytinhoc.com/danh-muc/lam-viec-voi-bang-tinh-trong-excel",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/lam-viec-voi-bang-tinh-trong-excel.jpg",
+      "alt": "Khóa học làm việc với bảng tính trong excel",
+      "title": "Làm Việc Với Bảng Tính Trong Excel"
+    },
+    {
+      "tab": "tab1",
+      "href": "https://blogdaytinhoc.com/danh-muc/ky-nang-su-dung-may-tinh",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/ky-nang-su-dung-may-tinh.jpg",
+      "alt": "Khóa học Kỹ Năng Sử Dụng Máy Tính",
+      "title": "Kỹ Năng Sử Dụng Máy Tính"
+    },
+    {
+      "tab": "tab1",
+      "href": "https://blogdaytinhoc.com/danh-muc/xu-ly-va-phan-tich-du-lieu-trong-excel",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/xu-ly-va-phan-tich-du-lieu-trong-excel.jpg",
+      "alt": "Khóa học Xử Lý Và Phân Tích Dữ Liệu Trong Excel",
+      "title": "Xử Lý Và Phân Tích Dữ Liệu Trong Excel"
+    },
+    {
+      "tab": "tab1",
+      "href": "https://blogdaytinhoc.com/danh-muc/soan-thao-van-ban-hanh-chinh-trong-word",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/soan-thao-van-ban-hanh-chinh-trong-word.jpg",
+      "alt": "Khóa học Soạn Thảo Văn Bản Hành Chính Trong Word",
+      "title": "Soạn Thảo Văn Bản Hành Chính Trong Word"
+    },
+    {
+      "tab": "tab1",
+      "href": "https://blogdaytinhoc.com/danh-muc/trinh-chieu-trong-powerpoint",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/trinh-chieu-trong-powerpoint.jpg",
+      "alt": "Khóa học Trình Chiếu Trong PowerPoint",
+      "title": "Trình Chiếu Trong PowerPoint"
+    },
+    {
+      "tab": "tab2",
+      "href": "https://blogdaytinhoc.com/danh-muc/autocad",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/autocad.jpg",
+      "alt": "Khóa học vẽ AutoCAD",
+      "title": "Vẽ AutoCAD"
+    },
+    {
+      "tab": "tab2",
+      "href": "https://blogdaytinhoc.com/danh-muc/ve-thiet-ke-co-khi",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/ve-thiet-ke-co-khi.jpg",
+      "alt": "Khóa học vẽ và thiết kế cơ khí",
+      "title": "Vẽ Thiết Kế Cơ Khí"
+    },
+    {
+      "tab": "tab2",
+      "href": "https://blogdaytinhoc.com/danh-muc/ve-thiet-ke-noi-that-xay-dung",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/ve-thiet-ke-noi-that-xay-dung.jpg",
+      "alt": "Khóa học Vẽ Thiết Kế Nội Thất, Xây Dựng",
+      "title": "Vẽ Thiết Kế Nội Thất, Xây Dựng"
+    },
+    {
+      "tab": "tab2",
+      "href": "https://blogdaytinhoc.com/danh-muc/xuat-hinh-anh-video-san-pham",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/xuat-hinh-anh-video-san-pham.png",
+      "alt": "Khóa học Xuất Hình Ảnh, Video Sản Phẩm",
+      "title": "Xuất Hình Ảnh, Video Sản Phẩm"
+    },
+    {
+      "tab": "tab2",
+      "href": "https://blogdaytinhoc.com/danh-muc/lap-trinh-cnc",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/lap-trinh-cnc.jpg",
+      "alt": "Khóa học Lập Trình CNC",
+      "title": "Lập Trình CNC"
+    },
+    {
+      "tab": "tab2",
+      "href": "https://blogdaytinhoc.com/danh-muc/ky-thuat-vien-thiet-ke-ngoai-that",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/ky-thuat-vien-thiet-ke-ngoai-that.jpg",
+      "alt": "Khóa học Kỹ Thuật Viên Thiết Kế Ngoại Thất",
+      "title": "Kỹ Thuật Viên Thiết Kế Ngoại Thất"
+    },
+    {
+      "tab": "tab2",
+      "href": "https://blogdaytinhoc.com/danh-muc/ky-thuat-vien-thiet-ke-noi-that",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/ky-thuat-vien-thiet-ke-noi-that.jpg",
+      "alt": "Khóa học Kỹ Thuật Viên Thiết Kế Nội Thất",
+      "title": "Kỹ Thuật Viên Thiết Kế Nội Thất"
+    },
+    {
+      "tab": "tab2",
+      "href": "https://blogdaytinhoc.com/danh-muc/ve-sketchup",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/ve-sketchup.png",
+      "alt": "khóa học thiết kế 3D trên SketchUp từ cơ bản tới nâng cao & 3Ds Max. Học diễn họa kiến trúc và kiến trúc. Khóa học SketchUp cho người mới bắt đầu.",
+      "title": "Vẽ SketchUp"
+    },
+    {
+      "tab": "tab3",
+      "href": "https://blogdaytinhoc.com/danh-muc/photoshop",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/photoshop.jpg",
+      "alt": "Khóa học PhotoShop",
+      "title": "PhotoShop"
+    },
+    {
+      "tab": "tab3",
+      "href": "https://blogdaytinhoc.com/danh-muc/coreldraw",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/coreldraw.jpg",
+      "alt": "Khóa học CorelDraw",
+      "title": "CorelDraw"
+    },
+    {
+      "tab": "tab3",
+      "href": "https://blogdaytinhoc.com/danh-muc/Illustrator-ai",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/illustrator-ai.jpg",
+      "alt": "Khóa học Illustrator (AI)",
+      "title": "Illustrator (AI)"
+    },
+    {
+      "tab": "tab3",
+      "href": "https://blogdaytinhoc.com/danh-muc/ky-thuat-vien-do-hoa",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/ky-thuat-vien-do-hoa.jpg",
+      "alt": "Khóa học Kỹ thuật viên đồ họa",
+      "title": "Kỹ Thuật Viên Đồ Họa"
+    },
+    {
+      "tab": "tab3",
+      "href": "https://blogdaytinhoc.com/danh-muc/bien-tap-va-dung-phim",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/bien-tap-va-dung-phim.png",
+      "alt": "Khóa học Biên Tập Và Dựng Phim",
+      "title": "Biên Tập Và Dựng Phim"
+    },
+    {
+      "tab": "tab3",
+      "href": "https://blogdaytinhoc.com/danh-muc/thiet-ke-canva",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/thiet-ke-canva.png",
+      "alt": "Khóa học Thiết Kế Canva",
+      "title": "Thiết Kế Canva"
+    },
+    {
+      "tab": "tab3",
+      "href": "https://blogdaytinhoc.com/danh-muc/dan-trang-in-an-voi-indesign",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/dan-trang-in-an-voi-indesign.jpg",
+      "alt": "Khóa học Dàn trang, in ấn với Indesign",
+      "title": "Dàn Trang, In Ấn Với Indesign"
+    },
+    {
+      "tab": "tab4",
+      "href": "https://blogdaytinhoc.com/danh-muc/tin-hoc-ung-dung",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/tin-hoc-ung-dung.jpg",
+      "alt": "Khóa học Tin Học Ứng Dụng",
+      "title": "Tin Học Ứng Dụng"
+    },
+    {
+      "tab": "tab4",
+      "href": "https://blogdaytinhoc.com/danh-muc/lap-trinh-tre-em",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/lap-trinh-tre-em.jpg",
+      "alt": "Khóa học Lập Trình Trẻ Em",
+      "title": "Lập Trình Trẻ Em"
+    },
+    {
+      "tab": "tab4",
+      "href": "https://blogdaytinhoc.com/danh-muc/thiet-ke-do-hoa-va-dung-hinh-3d",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/thiet-ke-do-hoa-va-dung-hinh-3d.jpg",
+      "alt": "Thiết kế đồ họa & Dựng hình 3D",
+      "title": "Thiết kế đồ họa & Dựng hình 3D"
+    },
+    {
+      "tab": "tab5",
+      "href": "https://blogdaytinhoc.com/danh-muc/tin-hoc-quoc-te-mos",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/tin-hoc-quoc-te-mos.jpg",
+      "alt": "Khóa học Tin Học Quốc Tế MOS",
+      "title": "Tin Học Quốc Tế MOS"
+    },
+    {
+      "tab": "tab5",
+      "href": "https://blogdaytinhoc.com/danh-muc/tin-hoc-quoc-te-ic3",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/tin-hoc-quoc-te-ic3.jpg",
+      "alt": "Khóa học Tin Học Quốc Tế IC3",
+      "title": "Tin Học Quốc Tế IC3"
+    },
+    {
+      "tab": "tab6",
+      "href": "https://blogdaytinhoc.com/danh-muc/ke-toan-tong-hop",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/ke-toan-tong-hop.jpg",
+      "alt": "Khóa học Kế toán tổng hợp",
+      "title": "Kế Toán Tổng Hợp"
+    },
+    {
+      "tab": "tab6",
+      "href": "https://blogdaytinhoc.com/danh-muc/ke-toan-thue",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/ke-toan-thue.jpg",
+      "alt": "Khóa học Kế toán thuế",
+      "title": "Kế Toán Thuế"
+    },
+    {
+      "tab": "tab6",
+      "href": "https://blogdaytinhoc.com/danh-muc/ke-toan-thuc-hanh",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/ke-toan-thuc-hanh.jpg",
+      "alt": "Khóa học Kế toán thực hành",
+      "title": "Kế Toán Thực Hành"
+    },
+    {
+      "tab": "tab6",
+      "href": "https://blogdaytinhoc.com/danh-muc/khoa-hoc-ke-toan-noi-bo",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/khoa-hoc-ke-toan-noi-bo.png",
+      "alt": "Khóa học Kế toán nội bộ",
+      "title": "Kế Toán Nội Bộ"
+    },
+    {
+      "tab": "tab7",
+      "href": "https://blogdaytinhoc.com/danh-muc/hanh-chinh-nhan-su",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/khoa-hoc-hanh-chinh-nhan-su.png",
+      "alt": "Khóa học Hành chính nhân sự",
+      "title": "Hành chính nhân sự"
+    },
+    {
+      "tab": "tab8",
+      "href": "https://blogdaytinhoc.com/danh-muc/hoc-ung-dung-ai-cho-cong-viec",
+      "img": "https://blogdaytinhoc.com/images/khoa-hoc/khoa-hoc-ung-dung-tri-tue-nhan-tao-ai.png",
+      "alt": "Khóa học ứng dụng trí tuệ nhân tạo AI",
+      "title": "Khóa Học AI"
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Thầy Bạch Hiến",
+      "role": "Tin học văn phòng &amp; AI",
+      "bio": "Chuyên gia đào tạo tin học và ứng dụng AI cho cá nhân, doanh nghiệp. Phương pháp giảng dạy thực tế, dễ hiểu, giúp học viên áp dụng ngay vào công việc.",
+      "exp": "12 năm kinh nghiệm",
+      "photo": "https://blogdaytinhoc.com/images/giao-vien/thay-bach-hien-giao-vien-day-tin-hoc-va-ung-dung-ai.jpg"
+    },
+    {
+      "name": "Cô Thiều Hồng",
+      "role": "Kế toán thực hành",
+      "bio": "Từng có 10 năm giữ chức vụ Kế toán trưởng doanh nghiệp, hướng dẫn kế toán thuế &amp; tổng hợp thực tế.",
+      "exp": "10 năm kinh nghiệm",
+      "photo": "https://blogdaytinhoc.com/images/giao-vien/co-thieu-hong-giao-vien-dao-tao-ke-toan.jpg"
+    },
+    {
+      "name": "Thầy Đinh Đăng",
+      "role": "Vẽ Kế Kỹ Thuật",
+      "bio": "chuyên đào tạo các phần mềm thiết kế bản vẽ kỹ thuật AutoCAD, SketchUp, SolidWorks, CNC; là kỹ sư có nhiều năm kinh nghiệm với dự án thực tế.",
+      "exp": "11 năm kinh nghiệm",
+      "photo": "https://blogdaytinhoc.com/images/giao-vien/thay-dinh-dang-giao-vien-dao-tao-thiet-ke-ban-ve-ky-thuat.jpg"
+    },
+    {
+      "name": "Cô Lệ Linh",
+      "role": "Thiết kế đồ họa",
+      "bio": "Designer thực chiến với Photoshop, Illustrator, CorelDraw và Canva. Phương châm giảng dạy sáng tạo, giúp học viên phát triển tư duy thiết kế và kỹ năng thực hành.",
+      "exp": "8 năm kinh nghiệm",
+      "photo": "https://blogdaytinhoc.com/images/giao-vien/co-le-linh-giao-vien-day-thiet-ke-do-hoa.jpg"
+    },
+    {
+      "name": "Thầy Hùng Trần",
+      "role": "Lập trình &amp; Tin học trẻ em",
+      "bio": "Chuyên gia đào tạo lập trình Python, Scratch, C++ và tư duy lập trình cho học sinh các cấp. Với phương châm: &quot;Chuyên Nghiệp - Tận Tâm - Học thành nghề&quot;.",
+      "exp": "6 năm kinh nghiệm",
+      "photo": "https://blogdaytinhoc.com/images/giao-vien/thay-hung-tran-giao-vien-dao-tao-lap-trinh-tin-hoc-tre-em.jpg"
+    },
+    {
+      "name": "Cô Thảo Hoa",
+      "role": "Tin học Quốc tế MOS/IC3",
+      "bio": "Luyện thi chứng chỉ MOS Specialist, MOS Expert, IC3. Học viên đạt kết quả cao trong các kỳ thi (Trên 900 điểm).",
+      "exp": "7 năm kinh nghiệm",
+      "photo": "https://blogdaytinhoc.com/images/giao-vien/co-thao-hoa-giao-vien-luyen-thi-mos-ic3.jpg"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Phạm Thị Lan",
+      "role": "Học viên lớp Tin học văn phòng",
+      "quote": "Chương trình học được xây dựng bài bản, từ cơ bản đến nâng cao, giúp tôi cải thiện đáng kể kỹ năng tin học văn phòng để phục vụ tốt cho công việc hằng ngày.",
+      "photo": "https://blogdaytinhoc.com/images/hoc-vien/cam-nhan-cua-hoc-vien-pham-thi-lan-hoc-vien-lop-tin-hoc-van-phong.jpg"
+    },
+    {
+      "name": "Trần Văn Hùng",
+      "role": "Học viên lớp Vẽ Kế Kỹ Thuật",
+      "quote": "Mình từ con số 0 mà giờ đã vẽ được bản vẽ kỹ thuật hoàn chỉnh. Học thực hành nhiều, thầy hướng dẫn rất dễ hiểu và luôn theo sát từng học viên.",
+      "photo": "https://blogdaytinhoc.com/images/hoc-vien/cam-nhan-cua-hoc-vien-tran-van-hung-lop-ve-ky-thuat.jpg"
+    },
+    {
+      "name": "Lê Thị Hồng",
+      "role": "Học viên lớp Kế toán thực hành",
+      "quote": "Kiến thức được hệ thống bài bản, có chứng từ thật để thực hành. Học xong mình xin việc kế toán dễ dàng hơn hẳn, áp dụng được ngay vào công việc.",
+      "photo": "https://blogdaytinhoc.com/images/hoc-vien/cam-nhan-cua-hoc-vien-le-thi-hong-hoc-vien-lop-ke-toan-thuc-hanh.jpg"
+    },
+    {
+      "name": "Phạm Quốc Bảo",
+      "role": "Học viên lớp MOS",
+      "quote": "Mình đã đăng ký khóa học MOS 365 Apps Word + Excel + PowerPoint. Hiện tại mình đã học xong Word, đang học Excel và sau này sẽ học tiếp PowerPoint.",
+      "photo": "https://blogdaytinhoc.com/images/hoc-vien/cam-nhan-cua-hoc-vien-pham-quoc-bao-hoc-vien-lop-mos.jpg"
+    },
+    {
+      "name": "Võ Thị Kim",
+      "role": "Học viên lớp AI văn phòng",
+      "quote": "Lịch học linh động, phù hợp với người đi làm. Word, Excel, PowerPoint, AI giờ không còn là nỗi sợ với mình nữa. Cảm ơn các thầy cô của Trung Tâm Đồ Họa Thực Chiến rất nhiều.",
+      "photo": "https://blogdaytinhoc.com/images/hoc-vien/cam-nhan-cua-hoc-vien-vo-thi-kim-hoc-vien-lop-ung-dung-ai-van-phong.jpg"
+    },
+    {
+      "name": "Đỗ Minh Tuấn",
+      "role": "Học viên lớp AI",
+      "quote": "Khóa AI cực kỳ thực tế, áp dụng được ngay vào công việc hằng ngày giúp mình tiết kiệm hàng giờ mỗi tuần. Nội dung cập nhật và rất hữu ích.",
+      "photo": "https://blogdaytinhoc.com/images/hoc-vien/cam-nhan-cua-hoc-vien-do-minh-tuan-hoc-vien-lop-ai.jpg"
+    }
+  ],
+  "locations": [
+    {
+      "num": "1",
+      "title": "",
+      "fullText": "1 Tp.HCM: Tầng 1, Số 193 Đ. Nguyễn Xí, P Bình Thạnh, TP Hồ Chí Minh - (Quận Bình Thạnh cũ)"
+    },
+    {
+      "num": "2",
+      "title": "",
+      "fullText": "2 Tp.HCM: Căn hộ Florita Quận 7, Khu đô thị Him Lam, Phường Tân Hưng - (Quận 7 cũ)"
+    },
+    {
+      "num": "3",
+      "title": "",
+      "fullText": "3 Tp.HCM: Phòng TM-0.39, 510 Kinh Dương Vương, phường An Lạc - (Tòa nhà Moonlight Boulevard, Giáp Quận 6 và Quận Bình Tân cũ)"
+    },
+    {
+      "num": "4",
+      "title": "",
+      "fullText": "4 Tp.HCM: A23 Lê Thị Riêng, KDC Thới An, phường Thới An - (Quận 12 cũ)"
+    },
+    {
+      "num": "5",
+      "title": "",
+      "fullText": "5 Tp.HCM (Thủ Đức, Q9): 133/2 Đ. Đỗ Xuân Hợp, Phường Phước Long, Tp.Thủ Đức - (Quận 9 cũ)"
+    },
+    {
+      "num": "6",
+      "title": "",
+      "fullText": "6 Tp.HCM: Căn hộ 1.22 CC Ruby (Tầng trệt), 2A Nguyễn Sỹ Sách, phường Tân Sơn - (Quận Tân Bình cũ)"
+    },
+    {
+      "num": "7",
+      "title": "",
+      "fullText": "7 Thủ Dầu Một, Bình Dương: Số 107, D5, KDC Phú Hòa 1, Khu 4, Phường Thủ Dầu Một, Thành phố Hồ Chí Minh - (TP. Thủ Dầu Một -Bình Dương cũ)"
+    },
+    {
+      "num": "8",
+      "title": "",
+      "fullText": "8 Thuận An, Bình Dương: 8 Đường NA8, Khu Dân Cư Viet Sing, phường Thuận Giao, Thành phố Hồ Chí Minh - (TP. Thuận An - Bình Dương cũ)"
+    },
+    {
+      "num": "9",
+      "title": "",
+      "fullText": "9 Dĩ An, Bình Dương: 184/19/11 Đặng Văn Mây, KP Đông Chiêu, Phường Dĩ An, Thành phố Hồ Chí Minh - (TP. Dĩ An - Bình Dương cũ)"
+    },
+    {
+      "num": "10",
+      "title": "",
+      "fullText": "10 Tân Uyên, Bình Dương: 20 đường ĐX 12, Phường Tân Khánh, TP. Hồ Chí Minh - (TP. Tân Uyên - Bình Dương cũ)"
+    },
+    {
+      "num": "11",
+      "title": "",
+      "fullText": "11 Biên Hòa, Đồng Nai: 91 Đoàn Văn Cự, phường Tam Hiệp, TP. Đồng Nai - (TP. Biên Hòa - Đồng Nai cũ)"
+    },
+    {
+      "num": "12",
+      "title": "",
+      "fullText": "12 Long Thành, Đồng Nai: 72 Đinh Bộ Lĩnh, phường Long Thành, TP. Đồng Nai - (Huyện Long Thành - Đồng Nai cũ)"
+    },
+    {
+      "num": "13",
+      "title": "",
+      "fullText": "13 Bà Rịa - Vũng Tàu: 293 Bình Giã, phường Tam Thắng, Thành phố Hồ Chí Minh - (TP. Bà Rịa - Vũng Tàu cũ)"
+    }
+  ],
+  "articles": [
+    {
+      "link": "https://blogdaytinhoc.com/trung-tam-tin-hoc-thuc-hanh-sao-viet-dao-tao-vi-tinh-van-phong-cho-nguoi-di-lam-51",
+      "img": "https://blogdaytinhoc.com/images/2024/8/1722958738_trung-tam-tin-hoc-sao-viet_big.jpg",
+      "cat": "Tin Học",
+      "title": "",
+      "excerpt": "Cập nhật mới nhất ngày 12 tháng 08 năm 2026: Trung tâm Tin Học văn phòng Sao Việt, chuyên đào tạo tin học văn phòng cho Cá Nhân, Doanh Nghiệp - Công ty Tại Tp.HCM, Hà Nội, Bình Dương, Biên Hòa, Đồng Nai. Dạy kỹ năng tin học cho người đi làm, xử lý dữ liệu và bảng tính chuyên nghiệp. Giáo viên nhiều năm kinh nghiệm,  nội dung dạy tin học văn phòng bám sát theo công việc thực tế.",
+      "date": "",
+      "author": ""
+    },
+    {
+      "link": "https://blogdaytinhoc.com/khoa-hoc-autocad-tai-tp-hcm-329",
+      "img": "https://blogdaytinhoc.com/images/2022/11/1668471712_Khoa-hoc-AutoCad-Tai-Tp-HCM_big.jpg",
+      "cat": "Tin Học",
+      "title": "",
+      "excerpt": "",
+      "date": "",
+      "author": ""
+    },
+    {
+      "link": "https://blogdaytinhoc.com/khoa-hoc-photoshop-cap-toc-tai-tp-hcm-thiet-ke-chinh-sua-anh-chuyen-nghiep-238",
+      "img": "https://blogdaytinhoc.com/images/2021/4/1618652531_hoc-Photoshop-tai-Tp-HCM_big.jpg",
+      "cat": "Tin Học",
+      "title": "",
+      "excerpt": "",
+      "date": "",
+      "author": ""
+    },
+    {
+      "link": "https://blogdaytinhoc.com/khoa-hoc-tin-hoc-van-phong-ung-dung-ai-thuc-chien-tai-phuong-tan-hung-quan-7-1418",
+      "img": "https://blogdaytinhoc.com/images/2026/7/1783778307_thumbnail-khoa-hoc-tin-hoc-van-phong-tai-phuong-tan-hung_medium.jpg",
+      "cat": "Tin Học",
+      "title": "",
+      "excerpt": "",
+      "date": "",
+      "author": ""
+    },
+    {
+      "link": "https://blogdaytinhoc.com/khoa-hoc-tin-hoc-van-phong-tai-phuong-phuoc-long-tp-thu-duc-thanh-thao-word-excel-powerpoint-ai-1419",
+      "img": "https://blogdaytinhoc.com/images/2026/7/1783779053_thumbnail-khoa-hoc-tin-hoc-van-phong-tai-phuong-phuoc-long_medium.jpg",
+      "cat": "Tin Học",
+      "title": "",
+      "excerpt": "",
+      "date": "",
+      "author": ""
+    },
+    {
+      "link": "https://blogdaytinhoc.com/khoa-hoc-tin-hoc-van-phong-cap-toc-tai-phuong-an-lac-tp-hcm-1414",
+      "img": "https://blogdaytinhoc.com/images/2026/6/1782572371_khoa-hoc-tin-hoc-van-phong-tai-phuong-an-lac_medium.jpg",
+      "cat": "Tin Học",
+      "title": "",
+      "excerpt": "",
+      "date": "",
+      "author": ""
+    },
+    {
+      "link": "https://blogdaytinhoc.com/khoa-hoc-tin-hoc-van-phong-phuong-gia-dinh-binh-thanh-tp-hcm-tu-co-ban-den-chuyen-nghiep-1415",
+      "img": "https://blogdaytinhoc.com/images/2026/6/1782572966_thumbnail-khoa-hoc-tin-hoc-van-phong-tai-phuong-gia-dinh_medium.jpg",
+      "cat": "Tin Học",
+      "title": "",
+      "excerpt": "",
+      "date": "",
+      "author": ""
+    },
+    {
+      "link": "https://blogdaytinhoc.com/khoa-hoc-ke-toan-tai-phuong-tan-hung-quan-7-tp-hcm-1410",
+      "img": "https://blogdaytinhoc.com/images/2026/6/1781967534_trung-tam-dao-tao-ke-toan-tai-phuong-tan-hung_medium.jpg",
+      "cat": "Tin Học",
+      "title": "",
+      "excerpt": "",
+      "date": "",
+      "author": ""
+    },
+    {
+      "link": "https://blogdaytinhoc.com/khoa-hoc-excel-bao-nhieu-tien-1238",
+      "img": "https://blogdaytinhoc.com/images/2025/2/1739288887_hoc-excel-bao-nhieu-tien_biglarge.jpg",
+      "cat": "Tin Học",
+      "title": "",
+      "excerpt": "Kỹ năng sử dụng Excel hiện nay rất quan trọng và ứng dụng hầu hết vào các công việc. Đăng ký học Excel càng sớm, bạn sẽ có thêm nhiều cơ hội trong công việc và sự nghiệp thăng tiến. Vậy một khóa học Excel khoảng bao nhiêu tiền? Bài viết sau đây sẽ đưa ra góc nhìn tổng quan về các khóa học Excel từ cơ bản tới nâng cao.",
+      "date": "",
+      "author": ""
+    },
+    {
+      "link": "https://blogdaytinhoc.com/hoc-excel-co-ban-trong-bao-lau-1239",
+      "img": "https://blogdaytinhoc.com/images/2025/2/1739288907_khoa-hoc-excel-co-ban-trong-bao-lau (1)_small.jpg",
+      "cat": "Tin Học",
+      "title": "",
+      "excerpt": "",
+      "date": "",
+      "author": ""
+    },
+    {
+      "link": "https://blogdaytinhoc.com/khoa-hoc-excel-tu-co-ban-den-nang-cao-tai-binh-tan-1192",
+      "img": "https://blogdaytinhoc.com/images/2024/11/1732627769_doi-tuong-hoc-vien-trong-khoa-hoc-excel-tai-binh-tan_small.jpg",
+      "cat": "Tin Học",
+      "title": "",
+      "excerpt": "",
+      "date": "",
+      "author": ""
+    },
+    {
+      "link": "https://blogdaytinhoc.com/huong-dan-ve-mot-so-luu-y-khi-thiet-ke-slide-trong-powerpoint-1179",
+      "img": "https://blogdaytinhoc.com/images/2024/10/1730361367_Mot-so-luu-y-khi-thiet-ke-slide_small.jpg",
+      "cat": "Tin Học",
+      "title": "",
+      "excerpt": "",
+      "date": "",
+      "author": ""
+    },
+    {
+      "link": "https://blogdaytinhoc.com/huong-dan-su-dung-ham-tinh-tong-phu-trong-excel-1180",
+      "img": "https://blogdaytinhoc.com/images/2024/10/1730372870_ham-tinh-tong-phu-subtotal-trong-excel_small.jpg",
+      "cat": "Tin Học",
+      "title": "",
+      "excerpt": "",
+      "date": "",
+      "author": ""
+    },
+    {
+      "link": "https://blogdaytinhoc.com/huong-dan-ve-phep-kiem-tra-va-ham-dieu-kien-trong-excel-1181",
+      "img": "https://blogdaytinhoc.com/images/2024/10/1730378784_Phep-kiem-tra-va-ham-dieu-kien-trong-excel_small.jpg",
+      "cat": "Tin Học",
+      "title": "",
+      "excerpt": "",
+      "date": "",
+      "author": ""
+    },
+    {
+      "link": "https://blogdaytinhoc.com/huong-dan-lam-viec-voi-noi-dung-trong-powerpoint-1176",
+      "img": "https://blogdaytinhoc.com/images/2024/10/1729768947_Lam-viec-voi-noi-dung-trong-powerpoint_small.jpg",
+      "cat": "Tin Học",
+      "title": "",
+      "excerpt": "",
+      "date": "",
+      "author": ""
+    }
+  ]
+}

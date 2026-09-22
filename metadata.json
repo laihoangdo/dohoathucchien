@@ -1,0 +1,6 @@
+{
+  "name": "Trung Tâm Đồ Họa Thực Chiến - Blog Dạy Tin Học",
+  "description": "Đồ Họa Thực Chiến - Đào Tạo Thiết Kế Đồ Họa, Vẽ Kỹ Thuật AutoCAD, SolidWorks, Tin Học Văn Phòng, Kế Toán và AI Thực Hành. Hotline: 0938636843 - 0337590737.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
