@@ -189,7 +189,8 @@ export const AdminView: React.FC<AdminViewProps> = ({ onNavigate }) => {
         setLoginError('Tên tài khoản hoặc mật khẩu không chính xác!');
       }
     } catch (err: any) {
-      setLoginError('Đã có lỗi xảy ra trong quá trình xác thực.');
+      console.error('Login authentication error:', err);
+      setLoginError(err?.message ? `Lỗi xác thực: ${err.message}` : 'Đã có lỗi xảy ra trong quá trình xác thực.');
     } finally {
       setIsLoggingIn(false);
     }

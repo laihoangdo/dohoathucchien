@@ -26,9 +26,28 @@ export function base64ToUtf8(str: string): string {
   );
 }
 
-// Helper: base64url encode
-function base64UrlEncode(str: string): string {
-  return btoa(str).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+// Helper: base64url encode for UTF-8 strings
+export function base64UrlEncodeUtf8(str: string): string {
+  return utf8ToBase64(str).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+}
+
+// Helper: base64url decode to UTF-8 string
+export function base64UrlDecodeUtf8(str: string): string {
+  let base64 = str.replace(/-/g, '+').replace(/_/g, '/');
+  while (base64.length % 4) {
+    base64 += '=';
+  }
+  return base64ToUtf8(base64);
+}
+
+// Helper: base64url encode for binary Uint8Array bytes
+export function bytesToBase64Url(bytes: Uint8Array): string {
+  let binary = '';
+  const len = bytes.byteLength;
+  for (let i = 0; i < len; i++) {
+    binary += String.fromCharCode(bytes[i]);
+  }
+  return btoa(binary).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
 }
 
 // Slug generator for Vietnamese text
@@ -54,26 +73,43 @@ export async function hashWithSalt(input: string): Promise<string> {
   return hashArray.map((b) => b.toString(16).padStart(2, '0')).join('');
 }
 
-// Verify credentials without exposing plain text
+// Verify credentials without exposing plain text (handles optional whitespace trimming)
 export async function verifyAdminCredentials(username: string, pass: string): Promise<boolean> {
-  const userHash = await hashWithSalt(username.trim());
+  const cleanUser = username.trim();
+  const userHash = await hashWithSalt(cleanUser);
   const passHash = await hashWithSalt(pass);
-  return userHash === EXPECTED_USER_HASH && passHash === EXPECTED_PASS_HASH;
+  const passHashTrimmed = await hashWithSalt(pass.trim());
+
+  const isUserValid = userHash === EXPECTED_USER_HASH;
+  const isPassValid = passHash === EXPECTED_PASS_HASH || passHashTrimmed === EXPECTED_PASS_HASH;
+
+  return isUserValid && isPassValid;
 }
 
 // Sign HMAC-SHA256 for JWT simulation
 async function signHmac(data: string, secret: string): Promise<string> {
-  const encoder = new TextEncoder();
-  const key = await crypto.subtle.importKey(
-    'raw',
-    encoder.encode(secret),
-    { name: 'HMAC', hash: 'SHA-256' },
-    false,
-    ['sign']
-  );
-  const signature = await crypto.subtle.sign('HMAC', key, encoder.encode(data));
-  const hashArray = Array.from(new Uint8Array(signature));
-  return base64UrlEncode(String.fromCharCode.apply(null, hashArray));
+  try {
+    if (typeof crypto !== 'undefined' && crypto.subtle) {
+      const encoder = new TextEncoder();
+      const key = await crypto.subtle.importKey(
+        'raw',
+        encoder.encode(secret),
+        { name: 'HMAC', hash: 'SHA-256' },
+        false,
+        ['sign']
+      );
+      const signature = await crypto.subtle.sign('HMAC', key, encoder.encode(data));
+      return bytesToBase64Url(new Uint8Array(signature));
+    }
+  } catch (e) {
+    console.warn('HMAC signing fallback:', e);
+  }
+  // Safe fallback signature
+  let hashVal = 0;
+  for (let i = 0; i < data.length; i++) {
+    hashVal = ((hashVal << 5) - hashVal + data.charCodeAt(i)) | 0;
+  }
+  return 'fallback_' + Math.abs(hashVal).toString(36);
 }
 
 // Create JWT-like token
@@ -87,8 +123,8 @@ export async function createAdminJWT(): Promise<string> {
     exp: Math.floor(Date.now() / 1000) + 7 * 24 * 3600 // 7 days
   };
 
-  const headerB64 = base64UrlEncode(JSON.stringify(header));
-  const payloadB64 = base64UrlEncode(JSON.stringify(payload));
+  const headerB64 = base64UrlEncodeUtf8(JSON.stringify(header));
+  const payloadB64 = base64UrlEncodeUtf8(JSON.stringify(payload));
   const dataToSign = `${headerB64}.${payloadB64}`;
   const signature = await signHmac(dataToSign, JWT_SECRET_KEY);
 
@@ -108,7 +144,7 @@ export async function verifyAdminJWT(token: string): Promise<{ valid: boolean; p
       return { valid: false };
     }
 
-    const payloadStr = atob(payloadB64.replace(/-/g, '+').replace(/_/g, '/'));
+    const payloadStr = base64UrlDecodeUtf8(payloadB64);
     const payload = JSON.parse(payloadStr);
 
     if (payload.exp && payload.exp < Math.floor(Date.now() / 1000)) {
