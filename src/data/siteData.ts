@@ -580,6 +580,24 @@ export const LOCATIONS_DATA: LocationInfo[] = [
 
 export const ARTICLES_DATA: Article[] = [
   {
+    id: "post-1790096721778",
+    slug: "khoa-hoc-photoshop-thuc-chien",
+    title: "Khóa học photoshop thực chiến",
+    excerpt: "Khóa học photoshop thực chiến",
+    cat: "Thiết kế đồ họa",
+    catSlug: "thiet-ke-do-hoa",
+    date: "23/9/2026",
+    author: "Admin Đồ Họa Thực Chiến",
+    views: 150,
+    commentsCount: 0,
+    img: "https://blogdaytinhoc.com/images/slider/29022024/khoa-hoc-thiet-ke-do-hoa.png",
+    tags: ["Thiết kế đồ họa","Đồ Họa Thực Chiến","Thực hành 1 kèm 1"],
+    featured: false,
+    toc: [{"id":"1-gioi-thieu-khoa-hoc-va-ky-nang","title":"1. Giới thiệu khóa học và kỹ năng","level":2},{"id":"2-cac-buoc-thuc-hien-tung-phan","title":"2. Các bước thực hiện từng phần","level":2},{"id":"3-tong-ket-va-luu-y-quan-trong","title":"3. Tổng kết và lưu ý quan trọng","level":2}],
+    content: "<h2>1. Giới thiệu khóa học và kỹ năng</h2>\n<p>Chào mừng bạn đến với giáo trình đào tạo thực tế tại <strong>Đồ Họa Thực Chiến</strong>. Bài viết này hướng dẫn chi tiết các bước thực hành từ cơ bản đến nâng cao.</p>\n\n<h2>2. Các bước thực hiện từng phần</h2>\n<p>Thực hiện lần lượt các thao tác bên dưới để đạt hiệu quả tối ưu nhất trong công việc thực tế.</p>\n<ul>\n  <li><strong>Bước 1:</strong> Thiết lập không gian làm việc và phím tắt thông dụng.</li>\n  <li><strong>Bước 2:</strong> Áp dụng các nguyên tắc bố cục và màu sắc chuẩn in ấn.</li>\n  <li><strong>Bước 3:</strong> Xuất file chất lượng cao cho khách hàng và xưởng in.</li>\n</ul>\n\n<h2>3. Tổng kết và lưu ý quan trọng</h2>\n<p>Luyện tập thường xuyên và tham gia các bài tập thực chiến để làm chủ hoàn toàn kỹ năng này nhé!</p>"
+  },
+
+  {
     id: 'post-1',
     slug: 'trung-tam-tin-hoc-thuc-hanh-sao-viet-dao-tao-vi-tinh-van-phong-cho-nguoi-di-lam-51',
     title: 'Trung Tâm Đồ Họa Thực Chiến - Chuyên Đào Tạo Thực Hành Cấp Tốc Cho Người Đi Làm',
