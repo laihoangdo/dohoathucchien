@@ -1082,3 +1082,50 @@ export const POPULAR_TAGS = [
   'Unikey',
   'Phím tắt'
 ];
+
+// Load any custom runtime articles and categories from localStorage
+if (typeof window !== 'undefined') {
+  try {
+    const savedArticles = localStorage.getItem('dhhc_custom_articles');
+    if (savedArticles) {
+      const parsed: Article[] = JSON.parse(savedArticles);
+      if (Array.isArray(parsed)) {
+        parsed.slice().reverse().forEach((art) => {
+          if (!ARTICLES_DATA.some((a) => a.id === art.id || a.slug === art.slug)) {
+            ARTICLES_DATA.unshift(art);
+          }
+        });
+      }
+    }
+
+    const savedCats = localStorage.getItem('dhhc_custom_categories');
+    if (savedCats) {
+      const parsed = JSON.parse(savedCats);
+      if (Array.isArray(parsed)) {
+        parsed.forEach((c) => {
+          if (!COURSE_TABS.some((t) => t.id === c.slug || t.name === c.name)) {
+            COURSE_TABS.push({ id: c.slug, name: c.name });
+          }
+        });
+      }
+    }
+  } catch (e) {
+    console.error('Error hydrating custom content:', e);
+  }
+}
+
+export function registerArticleRuntime(article: Article): void {
+  const existingIdx = ARTICLES_DATA.findIndex((a) => a.id === article.id || a.slug === article.slug);
+  if (existingIdx >= 0) {
+    ARTICLES_DATA[existingIdx] = article;
+  } else {
+    ARTICLES_DATA.unshift(article);
+  }
+}
+
+export function registerCategoryRuntime(category: { id: string; name: string; slug: string }): void {
+  if (!COURSE_TABS.some((t) => t.id === category.slug || t.name === category.name)) {
+    COURSE_TABS.push({ id: category.slug, name: category.name });
+  }
+}
+

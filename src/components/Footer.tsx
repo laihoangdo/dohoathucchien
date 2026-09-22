@@ -218,6 +218,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <button onClick={() => onNavigate('/lien-he')} className="hover:text-slate-300 transition">Bảo mật thông tin</button>
             <span>•</span>
             <button onClick={() => onNavigate('/lich-khai-giang')} className="hover:text-slate-300 transition">Đăng ký xếp lớp</button>
+            <span>•</span>
+            <button onClick={() => onNavigate('/admin')} className="hover:text-blue-400 transition text-slate-600 hover:text-slate-400">Quản trị CMS</button>
           </div>
         </div>
       </div>

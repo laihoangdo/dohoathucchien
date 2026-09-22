@@ -8,17 +8,27 @@ import { CategoryView } from './views/CategoryView';
 import { ScheduleView } from './views/ScheduleView';
 import { AboutView } from './views/AboutView';
 import { ContactView } from './views/ContactView';
+import { AdminView } from './views/AdminView';
 
 // Helper to determine the current path from hash, search (SPA redirect), or pathname
 function getCurrentPath(): string {
-  // 1. Check GitHub Pages 404 redirect param: ?p=/route
+  // 1. Check admin route explicitly in pathname, hash, or search
+  if (
+    window.location.pathname.includes('/admin') ||
+    window.location.hash.includes('/admin') ||
+    window.location.search.includes('admin')
+  ) {
+    return '/admin';
+  }
+
+  // 2. Check GitHub Pages 404 redirect param: ?p=/route
   const params = new URLSearchParams(window.location.search);
   const pParam = params.get('p');
   if (pParam) {
     return pParam.startsWith('/') ? pParam : `/${pParam}`;
   }
 
-  // 2. Check hash route: #/route
+  // 3. Check hash route: #/route
   if (window.location.hash) {
     const hash = window.location.hash.replace(/^#/, '');
     if (hash) {
@@ -26,7 +36,7 @@ function getCurrentPath(): string {
     }
   }
 
-  // 3. Check pathname
+  // 4. Check pathname
   const path = window.location.pathname;
   return path || '/';
 }
@@ -157,6 +167,11 @@ export default function App() {
       );
     }
 
+    // 8. Admin View: /admin
+    if (currentPath.startsWith('/admin')) {
+      return <AdminView onNavigate={handleNavigate} />;
+    }
+
     // Default: Home view
     return (
       <HomeView
@@ -166,6 +181,16 @@ export default function App() {
       />
     );
   };
+
+  const isAdminRoute = currentPath.startsWith('/admin');
+
+  if (isAdminRoute) {
+    return (
+      <div className="min-h-screen bg-slate-50 text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
+        {renderCurrentView()}
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen flex flex-col bg-white text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
