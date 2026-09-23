@@ -36,6 +36,7 @@ import {
   registerArticleRuntime,
   registerCategoryRuntime
 } from '../data/siteData';
+import { RichArticleEditor } from '../components/RichArticleEditor';
 import {
   verifyAdminCredentials,
   createAdminJWT,
@@ -113,7 +114,6 @@ export const AdminView: React.FC<AdminViewProps> = ({ onNavigate }) => {
 <h2>3. Tổng kết và lưu ý quan trọng</h2>
 <p>Luyện tập thường xuyên và tham gia các bài tập thực chiến để làm chủ hoàn toàn kỹ năng này nhé!</p>`);
   const [articleFeatured, setArticleFeatured] = useState<boolean>(false);
-  const [contentPreviewMode, setContentPreviewMode] = useState<'edit' | 'preview' | 'split'>('edit');
   const [articleSubmitStatus, setArticleSubmitStatus] = useState<{
     loading: boolean;
     success: boolean;
@@ -418,11 +418,6 @@ export const AdminView: React.FC<AdminViewProps> = ({ onNavigate }) => {
     { label: 'Photoshop Cấp Tốc', url: 'https://blogdaytinhoc.com/images/khoa-hoc/khoa-hoc-photoshop-thiet-ke-chinh-sua-anh.png' },
     { label: 'Tin Học Văn Phòng', url: 'https://blogdaytinhoc.com/images/khoa-hoc/tin-hoc-van-phong-ung-dung.jpg' }
   ];
-
-  // Quick content insert helper
-  const insertFormatting = (prefix: string, suffix: string = '') => {
-    setArticleContent((prev) => prev + `\n${prefix}Nội dung mới${suffix}\n`);
-  };
 
   // Loading state while checking JWT
   if (isVerifyingAuth) {
@@ -1071,124 +1066,24 @@ export const AdminView: React.FC<AdminViewProps> = ({ onNavigate }) => {
                   </div>
                 </div>
 
-                {/* Content Editor Toolbar */}
+                {/* Content Rich Editor Toolbar & Modes */}
                 <div>
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                    <label className="text-xs font-bold text-slate-700 uppercase tracking-wider">
-                      Nội dung chi tiết (HTML / Markdown)
+                    <label className="text-xs font-bold text-slate-700 uppercase tracking-wider flex items-center gap-1.5">
+                      <span>Nội dung chi tiết bài viết (Trình Soạn Thảo Đầy Đủ Công Cụ)</span>
+                      <span className="text-red-500">*</span>
                     </label>
-                    <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-xl">
-                      <button
-                        type="button"
-                        onClick={() => setContentPreviewMode('edit')}
-                        className={`text-[11px] font-bold px-2.5 py-1 rounded-lg transition ${
-                          contentPreviewMode === 'edit' ? 'bg-white text-blue-600 shadow-sm' : 'text-slate-600'
-                        }`}
-                      >
-                        Soạn thảo
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => setContentPreviewMode('split')}
-                        className={`text-[11px] font-bold px-2.5 py-1 rounded-lg transition ${
-                          contentPreviewMode === 'split' ? 'bg-white text-blue-600 shadow-sm' : 'text-slate-600'
-                        }`}
-                      >
-                        Chia đôi
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => setContentPreviewMode('preview')}
-                        className={`text-[11px] font-bold px-2.5 py-1 rounded-lg transition ${
-                          contentPreviewMode === 'preview' ? 'bg-white text-blue-600 shadow-sm' : 'text-slate-600'
-                        }`}
-                      >
-                        Xem trước
-                      </button>
-                    </div>
+                    <span className="text-[11px] text-blue-600 font-semibold bg-blue-50 px-2.5 py-0.5 rounded-full border border-blue-100">
+                      🎨 Trực Quan (WYSIWYG) • 💻 Mã HTML • ⚡ Chia Đôi (Split) • 📥 Mẫu Có Sẵn • 🎥 Nhúng Video/Bảng
+                    </span>
                   </div>
 
-                  {/* Format toolbar */}
-                  <div className="flex flex-wrap items-center gap-1 p-1.5 bg-slate-100 border border-slate-200 rounded-t-xl text-xs">
-                    <button
-                      type="button"
-                      onClick={() => insertFormatting('<h2>', '</h2>')}
-                      className="p-1.5 hover:bg-white rounded text-slate-700 font-bold"
-                      title="Thêm Tiêu Đề H2"
-                    >
-                      H2
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => insertFormatting('<h3>', '</h3>')}
-                      className="p-1.5 hover:bg-white rounded text-slate-700 font-bold"
-                      title="Thêm Tiêu Đề H3"
-                    >
-                      H3
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => insertFormatting('<strong>', '</strong>')}
-                      className="p-1.5 hover:bg-white rounded text-slate-700"
-                      title="In đậm"
-                    >
-                      <Bold className="w-3.5 h-3.5" />
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => insertFormatting('<em>', '</em>')}
-                      className="p-1.5 hover:bg-white rounded text-slate-700"
-                      title="In nghiêng"
-                    >
-                      <Italic className="w-3.5 h-3.5" />
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => insertFormatting('<ul>\n  <li>Mục 1</li>\n  <li>Mục 2</li>\n</ul>')}
-                      className="p-1.5 hover:bg-white rounded text-slate-700"
-                      title="Danh sách gạch đầu dòng"
-                    >
-                      <List className="w-3.5 h-3.5" />
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() =>
-                        insertFormatting(
-                          '<div class="callout-box info">\n  <h4>Lưu ý thực hành:</h4>\n  <p>Thực hiện các thao tác cẩn thận theo hướng dẫn.</p>\n</div>'
-                        )
-                      }
-                      className="p-1.5 hover:bg-white rounded text-slate-700 text-[11px] font-semibold"
-                      title="Hộp ghi chú Callout"
-                    >
-                      Hộp Lưu Ý
-                    </button>
-                  </div>
-
-                  {/* Editor Body */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-t-0 border-slate-200 rounded-b-xl overflow-hidden bg-white">
-                    {/* Textarea */}
-                    {(contentPreviewMode === 'edit' || contentPreviewMode === 'split') && (
-                      <textarea
-                        rows={16}
-                        value={articleContent}
-                        onChange={(e) => setArticleContent(e.target.value)}
-                        placeholder="Nhập nội dung HTML/Markdown bài viết..."
-                        className={`w-full p-4 font-mono text-xs leading-relaxed text-slate-800 bg-slate-50/50 focus:outline-none focus:bg-white transition ${
-                          contentPreviewMode === 'split' ? 'border-r border-slate-200' : 'col-span-2'
-                        }`}
-                      />
-                    )}
-
-                    {/* Live Preview */}
-                    {(contentPreviewMode === 'preview' || contentPreviewMode === 'split') && (
-                      <div
-                        className={`p-4 overflow-y-auto max-h-[380px] bg-white prose prose-sm max-w-none text-slate-700 ${
-                          contentPreviewMode === 'preview' ? 'col-span-2' : ''
-                        }`}
-                        dangerouslySetInnerHTML={{ __html: articleContent }}
-                      />
-                    )}
-                  </div>
+                  {/* Rich Article Editor Component */}
+                  <RichArticleEditor
+                    value={articleContent}
+                    onChange={setArticleContent}
+                    minHeight="460px"
+                  />
                 </div>
 
                 {/* Bottom Actions */}

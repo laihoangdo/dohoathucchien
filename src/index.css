@@ -39,10 +39,40 @@ body {
   background: #f0fdf4;
 }
 
+.callout-box.warning {
+  border-left-color: #f59e0b;
+  background: #fffbeb;
+}
+
+.callout-box.danger {
+  border-left-color: #ef4444;
+  background: #fef2f2;
+}
+
 .callout-box.download {
   border-left-color: #f59e0b;
   background: #fffbeb;
   text-align: center;
+}
+
+/* Rich text article elements */
+.article-body p.lead {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #1e293b;
+  line-height: 1.75;
+}
+
+.article-body blockquote {
+  border-left: 4px solid #0265ff;
+  padding-left: 1rem;
+  font-style: italic;
+  color: #475569;
+  margin: 1.25rem 0;
+  background: #f8fafc;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0 8px 8px 0;
 }
 
 .btn-sv-download {
