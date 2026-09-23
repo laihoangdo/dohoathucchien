@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Search, Users, Clock, Award, ArrowUpRight } from 'lucide-react';
 import { COURSE_TABS, COURSES_DATA } from '../data/siteData';
 import { Course } from '../types';
+import { SafeImage } from './SafeImage';
 
 interface CourseTabsProps {
   onNavigate: (path: string) => void;
@@ -92,17 +93,12 @@ export const CourseTabs: React.FC<CourseTabsProps> = ({ onNavigate, onOpenRegist
               className="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col relative card"
             >
               {/* Image banner */}
-              <div className="relative w-full h-44 overflow-hidden bg-slate-100">
-                <img
+              <div className="relative w-full h-44 overflow-hidden bg-slate-900">
+                <SafeImage
                   src={course.img}
                   alt={course.title}
+                  badge={course.categoryName}
                   className="w-full h-full object-cover object-center group-hover:scale-110 transition duration-500"
-                  loading="lazy"
-                  referrerPolicy="no-referrer"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src =
-                      'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80';
-                  }}
                 />
                 <div className="absolute top-2.5 left-2.5 bg-blue-600/90 backdrop-blur-xs text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider">
                   {course.categoryName}

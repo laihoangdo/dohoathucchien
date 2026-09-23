@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import { Sidebar } from '../components/Sidebar';
 import { SITE_INFO, TEACHERS_DATA } from '../data/siteData';
+import { SafeImage } from '../components/SafeImage';
 import { useSEO } from '../hooks/useSEO';
 
 interface AboutViewProps {
@@ -148,16 +149,57 @@ export const AboutView: React.FC<AboutViewProps> = ({
                 Tất cả các cơ sở đào tạo của Đồ Họa Thực Chiến đều được trang bị hệ thống máy vi tính cấu hình cao màn hình 24-27 inch full HD, phòng học máy lạnh mát mẻ, bàn ghế thiết kế tiêu chuẩn chống mỏi lưng, wifi tốc độ cao và chỗ giữ xe an ninh miễn phí.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <img
-                  src="https://blogdaytinhoc.com/images/2024/8/1722958738_trung-tam-tin-hoc-sao-viet_big.jpg"
-                  alt="Phòng học Đồ Họa Thực Chiến"
-                  className="rounded-2xl w-full h-48 object-cover shadow"
-                />
-                <img
-                  src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=600&q=80"
-                  alt="Không gian đào tạo 1 kèm 1"
-                  className="rounded-2xl w-full h-48 object-cover shadow"
-                />
+                <div className="group relative rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-slate-900">
+                  <SafeImage
+                    src="/images/trung-tam.jpg"
+                    alt="Mặt tiền cơ sở đào tạo Đồ Họa Thực Chiến"
+                    badge="Trụ sở Quận 12"
+                    className="w-full h-52 object-cover group-hover:scale-105 transition duration-500"
+                  />
+                  <div className="p-3 bg-white">
+                    <h4 className="font-bold text-xs text-slate-800">Trụ sở trung tâm đào tạo 2D, 3D</h4>
+                    <p className="text-[11px] text-slate-500">362/6/17 Hiệp Thành 13, P. Tân Thới Hiệp, Q12</p>
+                  </div>
+                </div>
+
+                <div className="group relative rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-slate-900">
+                  <SafeImage
+                    src="/images/trung-tam2.jpg"
+                    alt="Phòng máy tính thực hành hiện đại"
+                    badge="Phòng máy tính"
+                    className="w-full h-52 object-cover group-hover:scale-105 transition duration-500"
+                  />
+                  <div className="p-3 bg-white">
+                    <h4 className="font-bold text-xs text-slate-800">Phòng thực hành cấu hình cao</h4>
+                    <p className="text-[11px] text-slate-500">Màn hình lớn, điều hòa mát mẻ, máy móc đồng bộ</p>
+                  </div>
+                </div>
+
+                <div className="group relative rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-slate-900">
+                  <SafeImage
+                    src="/images/trung-tam3.jpg"
+                    alt="Khai giảng khóa học thiết kế đồ họa"
+                    badge="Khai giảng"
+                    className="w-full h-52 object-cover group-hover:scale-105 transition duration-500"
+                  />
+                  <div className="p-3 bg-white">
+                    <h4 className="font-bold text-xs text-slate-800">Khai giảng lớp học mới</h4>
+                    <p className="text-[11px] text-slate-500">Không khí khai giảng và định hướng nghề nghiệp</p>
+                  </div>
+                </div>
+
+                <div className="group relative rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-slate-900">
+                  <SafeImage
+                    src="/images/lop-hoc-1.jpg"
+                    alt="Lớp học thực hành 1 kèm 1"
+                    badge="Lớp học thực tế"
+                    className="w-full h-52 object-cover group-hover:scale-105 transition duration-500"
+                  />
+                  <div className="p-3 bg-white">
+                    <h4 className="font-bold text-xs text-slate-800">Học viên thực hành chăm chỉ</h4>
+                    <p className="text-[11px] text-slate-500">Giảng viên kèm cặp tận tâm từng học viên</p>
+                  </div>
+                </div>
               </div>
             </div>
 

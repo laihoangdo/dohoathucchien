@@ -36,8 +36,12 @@ import {
   Eraser,
   Download,
   HelpCircle,
-  CheckSquare
+  CheckSquare,
+  Palette,
+  Type
 } from 'lucide-react';
+import { REAL_PHOTOS } from './RealPhotosGallery';
+import { SafeImage } from './SafeImage';
 
 interface RichArticleEditorProps {
   value: string;
@@ -84,13 +88,13 @@ export const RichArticleEditor: React.FC<RichArticleEditorProps> = ({
   const [calloutTitle, setCalloutTitle] = useState<string>('💡 Thông tin quan trọng:');
   const [calloutContent, setCalloutContent] = useState<string>('Nhập thông tin lưu ý chi tiết cho học viên tại đây...');
 
-  // Preset images
-  const sampleImages = [
-    { label: 'Đồ Họa', url: 'https://blogdaytinhoc.com/images/slider/29022024/khoa-hoc-thiet-ke-do-hoa.png' },
-    { label: 'AutoCAD', url: 'https://blogdaytinhoc.com/images/slider/29022024/khoa-hoc-ve-ky-thuat.png' },
-    { label: 'Photoshop', url: 'https://blogdaytinhoc.com/images/khoa-hoc/khoa-hoc-photoshop-thiet-ke-chinh-sua-anh.png' },
-    { label: 'Tin Học VP', url: 'https://blogdaytinhoc.com/images/khoa-hoc/tin-hoc-van-phong-ung-dung.jpg' }
-  ];
+  // Real photos from 20 user assets
+  const sampleImages = REAL_PHOTOS.map((p) => ({
+    label: p.title,
+    url: p.src,
+    tag: p.tag,
+    filename: p.filename
+  }));
 
   // Sync internal visual content when value changes externally
   useEffect(() => {
@@ -943,11 +947,78 @@ export const RichArticleEditor: React.FC<RichArticleEditorProps> = ({
       {/* Modal: Insert Image */}
       {activeModal === 'image' && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-xs">
-          <div className="bg-white rounded-2xl max-w-lg w-full p-5 shadow-2xl border border-slate-200">
-            <h3 className="font-bold text-sm text-slate-900 mb-3 flex items-center gap-2">
-              <ImageIcon className="w-4 h-4 text-indigo-600" />
-              <span>Chèn Hình Ảnh Bài Viết</span>
+          <div className="bg-white rounded-3xl max-w-2xl w-full p-5 sm:p-6 shadow-2xl border border-slate-200 max-h-[90vh] overflow-y-auto">
+            <h3 className="font-bold text-sm sm:text-base text-slate-900 mb-3 flex items-center justify-between">
+              <span className="flex items-center gap-2">
+                <ImageIcon className="w-5 h-5 text-indigo-600" />
+                <span>Chèn Hình Ảnh Bài Viết</span>
+              </span>
+              <span className="text-[11px] font-semibold bg-indigo-50 text-indigo-700 px-2.5 py-1 rounded-full">
+                20 ảnh có sẵn
+              </span>
             </h3>
+
+            {/* Quick Picker: 20 Real Images Grid */}
+            <div className="mb-4">
+              <label className="block text-xs font-bold text-slate-700 mb-2">
+                Chọn từ kho 20 hình ảnh thực tế trung tâm:
+              </label>
+              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-2 max-h-48 overflow-y-auto p-2 bg-slate-50 rounded-2xl border border-slate-200">
+                {sampleImages.map((s, idx) => (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => {
+                      setImageUrl(s.url);
+                      setImageCaption(s.label);
+                    }}
+                    className={`group relative aspect-[4/3] rounded-xl overflow-hidden border text-left transition ${
+                      imageUrl === s.url
+                        ? 'ring-2 ring-blue-600 border-transparent shadow'
+                        : 'border-slate-200 hover:border-blue-400'
+                    }`}
+                    title={s.label}
+                  >
+                    <SafeImage
+                      src={s.url}
+                      alt={s.label}
+                      className="w-full h-full object-cover group-hover:scale-110 transition duration-300"
+                    />
+                    <div className="absolute inset-x-0 bottom-0 bg-black/75 p-1 text-[9px] text-white font-medium truncate">
+                      {s.filename}
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Upload from Computer */}
+            <div className="mb-4 p-3 bg-blue-50/60 rounded-2xl border border-blue-100 flex items-center justify-between gap-3">
+              <div>
+                <div className="text-xs font-bold text-blue-900">Hoặc tải ảnh từ máy tính của bạn:</div>
+                <div className="text-[11px] text-blue-700">Tự động chèn trực tiếp vào nội dung bài viết</div>
+              </div>
+              <label className="px-3.5 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs cursor-pointer shadow transition flex-shrink-0">
+                <span>Chọn tệp ảnh</span>
+                <input
+                  type="file"
+                  accept="image/*"
+                  className="hidden"
+                  onChange={(e) => {
+                    const file = e.target.files?.[0];
+                    if (file) {
+                      const reader = new FileReader();
+                      reader.onload = () => {
+                        setImageUrl(reader.result as string);
+                        setImageCaption(file.name.replace(/\.[^/.]+$/, ''));
+                      };
+                      reader.readAsDataURL(file);
+                    }
+                  }}
+                />
+              </label>
+            </div>
+
             <div className="space-y-3">
               <div>
                 <label className="block text-xs font-bold text-slate-700 mb-1">Đường dẫn hình ảnh (URL):</label>
@@ -955,34 +1026,22 @@ export const RichArticleEditor: React.FC<RichArticleEditorProps> = ({
                   type="text"
                   value={imageUrl}
                   onChange={(e) => setImageUrl(e.target.value)}
-                  placeholder="https://..."
-                  className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-xl text-xs focus:ring-2 focus:ring-blue-600 focus:bg-white"
+                  placeholder="/images/khoa-hoc.jpg hoặc https://..."
+                  className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-xl text-xs font-mono focus:ring-2 focus:ring-blue-600 focus:bg-white"
                 />
-                {/* Presets */}
-                <div className="flex flex-wrap items-center gap-1.5 mt-2">
-                  <span className="text-[10px] text-slate-400">Chọn nhanh ảnh:</span>
-                  {sampleImages.map((s, idx) => (
-                    <button
-                      key={idx}
-                      type="button"
-                      onClick={() => setImageUrl(s.url)}
-                      className="text-[10px] bg-slate-100 hover:bg-blue-50 text-slate-600 px-2 py-0.5 rounded border border-slate-200 font-semibold"
-                    >
-                      {s.label}
-                    </button>
-                  ))}
-                </div>
               </div>
+
               <div>
                 <label className="block text-xs font-bold text-slate-700 mb-1">Chú thích dưới ảnh (Caption):</label>
                 <input
                   type="text"
                   value={imageCaption}
                   onChange={(e) => setImageCaption(e.target.value)}
-                  placeholder="Ví dụ: Giao diện thực hành đồ họa tại lớp học..."
+                  placeholder="Ví dụ: Lớp học thực hành 1 kèm 1 tại Đồ Họa Thực Chiến..."
                   className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-xl text-xs focus:ring-2 focus:ring-blue-600 focus:bg-white"
                 />
               </div>
+
               <div>
                 <label className="block text-xs font-bold text-slate-700 mb-1">Căn lề hình ảnh:</label>
                 <div className="flex gap-2">
@@ -1001,20 +1060,21 @@ export const RichArticleEditor: React.FC<RichArticleEditorProps> = ({
                 </div>
               </div>
             </div>
-            <div className="flex justify-end gap-2 mt-4 pt-3 border-t border-slate-100">
+
+            <div className="flex justify-end gap-2 mt-5 pt-3 border-t border-slate-100">
               <button
                 type="button"
                 onClick={() => setActiveModal(null)}
-                className="px-3.5 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-bold"
+                className="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-bold"
               >
                 Hủy
               </button>
               <button
                 type="button"
                 onClick={handleInsertImage}
-                className="px-4 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold shadow"
+                className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold shadow"
               >
-                Chèn Ảnh
+                Chèn Ảnh Vào Bài Viết
               </button>
             </div>
           </div>

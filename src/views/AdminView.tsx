@@ -37,6 +37,7 @@ import {
   registerCategoryRuntime
 } from '../data/siteData';
 import { RichArticleEditor } from '../components/RichArticleEditor';
+import { MediaManager } from '../components/MediaManager';
 import {
   verifyAdminCredentials,
   createAdminJWT,
@@ -75,7 +76,7 @@ export const AdminView: React.FC<AdminViewProps> = ({ onNavigate }) => {
   const [isLoggingIn, setIsLoggingIn] = useState<boolean>(false);
 
   // Active Tab
-  const [activeTab, setActiveTab] = useState<'dashboard' | 'new-article' | 'categories' | 'articles-list' | 'github-settings'>('dashboard');
+  const [activeTab, setActiveTab] = useState<'dashboard' | 'new-article' | 'categories' | 'articles-list' | 'github-settings' | 'media-manager'>('dashboard');
 
   // GitHub Integration State
   const [githubToken, setGithubTokenState] = useState<string>(getGitHubToken() || '');
@@ -675,6 +676,22 @@ export const AdminView: React.FC<AdminViewProps> = ({ onNavigate }) => {
                 <span>Quản Lý Danh Mục</span>
                 <span className="ml-auto text-[10px] bg-slate-200 text-slate-700 px-1.5 py-0.5 rounded-full font-semibold">
                   {COURSE_TABS.length}
+                </span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setActiveTab('media-manager')}
+                className={`w-full text-left px-3 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2.5 transition ${
+                  activeTab === 'media-manager'
+                    ? 'bg-blue-600 text-white shadow'
+                    : 'text-slate-600 hover:bg-slate-100'
+                }`}
+              >
+                <ImageIcon className="w-4 h-4" />
+                <span>Quản Lý Hình Ảnh (20)</span>
+                <span className="ml-auto text-[10px] bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded-full font-bold">
+                  20 ảnh
                 </span>
               </button>
 
@@ -1378,7 +1395,10 @@ export const AdminView: React.FC<AdminViewProps> = ({ onNavigate }) => {
             </div>
           )}
 
-          {/* TAB 5: GITHUB SETTINGS */}
+          {/* TAB 5: MEDIA MANAGER */}
+          {activeTab === 'media-manager' && <MediaManager />}
+
+          {/* TAB 6: GITHUB SETTINGS */}
           {activeTab === 'github-settings' && (
             <div className="bg-white rounded-2xl border border-slate-200 p-5 sm:p-7 shadow-sm space-y-6">
               <div>

@@ -17,6 +17,7 @@ import { CourseTabs } from '../components/CourseTabs';
 import { TeachersCarousel } from '../components/TeachersCarousel';
 import { TestimonialsCarousel } from '../components/TestimonialsCarousel';
 import { Sidebar } from '../components/Sidebar';
+import { RealPhotosGallery } from '../components/RealPhotosGallery';
 import { ARTICLES_DATA, SITE_INFO } from '../data/siteData';
 import { useSEO } from '../hooks/useSEO';
 
@@ -223,7 +224,10 @@ export const HomeView: React.FC<HomeViewProps> = ({
         </div>
       </section>
 
-      {/* 4. Teachers Section */}
+      {/* 4. Real Photos Gallery - 20 Real Classroom, Course Banners & 3D Projects */}
+      <RealPhotosGallery />
+
+      {/* 5. Teachers Section */}
       <TeachersCarousel />
 
       {/* 5. Testimonials Section */}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Clock, Award } from 'lucide-react';
 import { TEACHERS_DATA } from '../data/siteData';
+import { SafeImage } from './SafeImage';
 
 export const TeachersCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -60,19 +61,13 @@ export const TeachersCarousel: React.FC = () => {
                     <div>
                       {/* Photo with avatar circle */}
                       <div className="relative mx-auto w-24 h-24 mb-4">
-                        <img
+                        <SafeImage
                           src={teacher.photo}
                           alt={teacher.name}
+                          badge={teacher.role}
                           className="w-24 h-24 rounded-full object-cover border-4 border-white shadow-lg mx-auto teacher-photo"
-                          loading="lazy"
-                          referrerPolicy="no-referrer"
-                          onError={(e) => {
-                            (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(
-                              teacher.name
-                            )}&background=0265ff&color=fff&size=200`;
-                          }}
                         />
-                        <div className="absolute -bottom-1 -right-1 bg-blue-600 text-white p-1 rounded-full shadow" title="Giáo viên chính thức">
+                        <div className="absolute -bottom-1 -right-1 bg-blue-600 text-white p-1 rounded-full shadow" title="Giảng viên thực chiến">
                           <Award className="w-3.5 h-3.5" />
                         </div>
                       </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight } from 'lucide-react';
+import { SafeImage } from './SafeImage';
 
 interface HeroSliderProps {
   onNavigate: (path: string) => void;
@@ -9,51 +10,67 @@ interface HeroSliderProps {
 const SLIDES = [
   {
     id: 1,
-    badge: 'ĐÀO TẠO THỰC HÀNH CẤP TỐC',
-    title: 'KHÓA HỌC TIN HỌC VĂN PHÒNG',
-    subtitle: 'Học 1 Kèm 1 - Cầm Tay Chỉ Việc - Thành Thạo Word, Excel, PowerPoint',
+    badge: 'ƯU ĐÃI KHUYẾN MÃI ĐẶC BIỆT',
+    title: 'KHÓA HỌC PHOTOSHOP THỰC HÀNH THỰC CHIẾN',
+    subtitle: 'Giá Khuyến Mãi Chỉ Từ 1.000.000đ — Cầm Tay Chỉ Việc 1 Kèm 1',
     points: [
-      'Thời gian học linh hoạt: Sáng, chiều, tối rảnh giờ nào học giờ đó',
-      'Cam kết làm được việc ngay sau khóa học, hỗ trợ sau tốt nghiệp',
-      'Học lại miễn phí 100% nếu chưa thành thạo'
+      'Chỉnh sửa ảnh chuyên nghiệp, cắt ghép, blend màu, phục chế ảnh cưới & sản phẩm',
+      'Thiết kế banner, poster, menu, backdrop, standee phục vụ in ấn & quảng cáo',
+      'Ứng dụng AI tăng tốc quy trình thiết kế, tặng trọn bộ tài nguyên thiết kế cao cấp'
     ],
     ctaText: 'Đăng Ký Học Ngay',
-    ctaLink: '/danh-muc/tin-hoc-van-phong',
-    bgGradient: 'from-blue-900 via-blue-800 to-indigo-950',
-    accentColor: '#0265ff',
-    image: 'https://blogdaytinhoc.com/images/2024/8/1722958738_trung-tam-tin-hoc-sao-viet_big.jpg'
+    ctaLink: '/danh-muc/tu-hoc-photoshop',
+    bgGradient: 'from-blue-950 via-slate-900 to-indigo-950',
+    accentColor: '#0284c7',
+    image: '/images/khoa-hoc.jpg'
   },
   {
     id: 2,
-    badge: 'ỨNG DỤNG CÔNG NGHỆ MỚI',
-    title: 'KHÓA HỌC ỨNG DỤNG AI CHO DÂN VĂN PHÒNG',
-    subtitle: 'Đột phá năng suất gấp 5 lần với ChatGPT, Google Gemini & Tự động hóa Excel',
+    badge: 'ĐÀO TẠO TỪ CƠ BẢN ĐẾN NÂNG CAO',
+    title: 'KHÓA HỌC THIẾT KẾ NỘI THẤT THỰC CHIẾN',
+    subtitle: 'Tay Ngang Trở Thành Thiết Kế Sau 5 Tuần Học — Đi Thực Tế Sau Khóa Học',
     points: [
-      'Xử lý bảng tính và báo cáo dữ liệu phức tạp trong 30 giây',
-      'Soạn thảo văn bản, hợp đồng, email chuyên nghiệp bằng AI Agents',
-      'Xây dựng trợ lý ảo hỗ trợ công việc văn phòng tự động'
+      'Làm chủ AutoCAD, SketchUp - Vray, 3Ds Max - Vray chuyên nghiệp',
+      'Kỹ năng xuất file ABF, hậu kỳ Photoshop, dựng phối cảnh Họa viên kiến trúc 3D',
+      'Bóc tách - triển khai bản vẽ chi tiết, lịch học tự chọn linh hoạt'
     ],
-    ctaText: 'Khám Phá Khóa AI',
-    ctaLink: '/danh-muc/khoa-hoc-ai',
-    bgGradient: 'from-slate-900 via-blue-950 to-indigo-900',
-    accentColor: '#8b5cf6',
-    image: 'https://blogdaytinhoc.com/images/khoa-hoc/khoa-hoc-ai.jpg'
+    ctaText: 'Xem Khóa Nội Thất',
+    ctaLink: '/danh-muc/sketchup',
+    bgGradient: 'from-amber-950 via-slate-900 to-yellow-950',
+    accentColor: '#d97706',
+    image: '/images/khoa-hoc-7.jpg'
   },
   {
     id: 3,
-    badge: 'THIẾT KẾ & VẼ KỸ THUẬT',
-    title: 'ĐÀO TẠO AUTOCAD 2D, 3D & SOLIDWORKS',
-    subtitle: 'Dành Cho Kỹ Sư, Sinh Viên Cơ Khí, Kiến Trúc, Nội Thất & Xây Dựng',
+    badge: 'HỌC NHANH CẤP TỐC — ĐĂNG KÝ HỌC NGAY',
+    title: 'TIN HỌC VĂN PHÒNG CHO NGƯỜI ĐI LÀM',
+    subtitle: 'Chưa Biết Gì Vẫn Học Được — Thời Gian Linh Động Sáng, Chiều, Tối',
     points: [
-      'Triển khai bản vẽ kỹ thuật chi tiết theo tiêu chuẩn TCVN & Quốc tế',
-      'Thực hành 100% trên dự án công trình & khuôn mẫu thực tế',
-      'Giáo viên là kỹ sư giàu kinh nghiệm thực chiến tại doanh nghiệp'
+      'Thành thạo soạn thảo Word chuẩn công văn, bảng tính Excel tính toán tự động',
+      'Thiết kế bài thuyết trình PowerPoint ấn tượng, xử lý công việc văn phòng cấp tốc',
+      'Học 1 kèm 1 trực tiếp tại lớp máy tính, học lại miễn phí nếu chưa thành thạo'
     ],
-    ctaText: 'Xem Khóa Kỹ Thuật',
-    ctaLink: '/danh-muc/autocad',
+    ctaText: 'Xem Khóa Tin Học',
+    ctaLink: '/danh-muc/tin-hoc-van-phong',
     bgGradient: 'from-cyan-950 via-slate-900 to-blue-950',
-    accentColor: '#06b6d4',
-    image: 'https://blogdaytinhoc.com/images/2022/11/1668471712_Khoa-hoc-AutoCad-Tai-Tp-HCM_big.jpg'
+    accentColor: '#0284c7',
+    image: '/images/lop-hoc-4.jpg'
+  },
+  {
+    id: 4,
+    badge: 'THIẾT KẾ VECTOR CHUYÊN NGHIỆP',
+    title: 'KHÓA HỌC ILLUSTRATOR (AI) CHUYÊN IN ẤN',
+    subtitle: 'Học Là Làm Được! Cầm Tay Chỉ Việc — Tặng Trọn Bộ Tài Nguyên Thiết Kế',
+    points: [
+      'Thiết kế namecard, hộp giấy, nhãn mác sản phẩm, tờ rơi, catalogue, biển quảng cáo',
+      'Xuất file chuẩn hệ màu CMYK phục vụ xưởng in ấn và gia công không lỗi phông',
+      'Cấp chứng chỉ tốt nghiệp, hỗ trợ giải đáp kỹ thuật trọn đời sau khóa học'
+    ],
+    ctaText: 'Xem Khóa Illustrator',
+    ctaLink: '/danh-muc/tu-hoc-photoshop',
+    bgGradient: 'from-orange-950 via-slate-900 to-red-950',
+    accentColor: '#ea580c',
+    image: '/images/khoa-hoc-3.jpg'
   }
 ];
 
@@ -131,23 +148,19 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({ onNavigate, onOpenRegist
           <div className="lg:col-span-5 hidden lg:block">
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-yellow-400 rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-500" />
-              <div className="relative rounded-2xl overflow-hidden border border-white/20 shadow-2xl bg-slate-800">
-                <img
+              <div className="relative rounded-2xl overflow-hidden border border-white/20 shadow-2xl bg-slate-950">
+                <SafeImage
                   src={active.image}
                   alt={active.title}
-                  className="w-full h-72 object-cover object-center group-hover:scale-105 transition duration-500"
-                  referrerPolicy="no-referrer"
-                  onError={(e) => {
-                    // Fallback to stylized placeholder if offline
-                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80';
-                  }}
+                  badge={active.badge}
+                  className="w-full h-80 object-cover object-center group-hover:scale-105 transition duration-500"
                 />
-                <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-4">
+                <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent p-4">
                   <div className="text-white text-xs font-bold uppercase tracking-wider text-yellow-300">
-                    Trung Tâm Đào Tạo Đồ Họa Thực Chiến
+                    Đồ Họa Thực Chiến — dohoathehemoi.com
                   </div>
                   <div className="text-white text-sm font-semibold truncate">
-                    Cam kết chất lượng - 13 Chi nhánh tại Việt Nam
+                    Hotline: 0938.636.843 — Học 1 Kèm 1 Cầm Tay Chỉ Việc
                   </div>
                 </div>
               </div>

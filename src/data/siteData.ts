@@ -3,20 +3,20 @@ import { Course, Teacher, Testimonial, LocationInfo, Article, ScheduleItem } fro
 export const SITE_INFO = {
   brandName: 'Đồ Họa Thực Chiến',
   siteTitle: 'Đồ Họa Thực Chiến - Đào Tạo Thiết Kế & Đồ Họa Thực Hành Chất Lượng Cao',
-  companyName: 'CÔNG TY TNHH GIÁO DỤC ĐỒ HỌA THỰC CHIẾN',
+  companyName: 'TRUNG TÂM ĐÀO TẠO THIẾT KẾ ĐỒ HỌA THỰC CHIẾN',
   taxId: '3603708616',
   taxCode: '3603708616',
   hotline1: '0938.636.843',
   hotline2: '0337.590.737',
-  email: 'dohoathucchien@gmail.com',
+  email: 'dohoathehemoi@gmail.com',
   workingHours: '8h00 - 21h30 (Thứ 2 - Chủ Nhật)',
-  website: 'https://blogdaytinhoc.com',
+  website: 'https://dohoathehemoi.com',
   zaloUrl: 'https://zalo.me/0938636843',
   zalo: 'https://zalo.me/0938636843',
-  facebookUrl: 'https://www.facebook.com/daotaotinhocsaoviet/',
-  youtubeUrl: 'https://www.youtube.com/@tinhocsaoviet',
+  facebookUrl: 'https://www.facebook.com/dohoathehemoi/',
+  youtubeUrl: 'https://www.youtube.com/@dohoathucchien',
   slogan: 'Đào tạo đồ họa thực hành - Cầm tay chỉ việc - Học là làm được việc ngay',
-  intro: 'Trung tâm Đồ Họa Thực Chiến là một trong những đơn vị đào tạo thiết kế đồ họa, vẽ kỹ thuật và ứng dụng máy tính thực hành hàng đầu tại Việt Nam. Với phương châm đào tạo thực hành chất lượng cao, Đồ Họa Thực Chiến đã khẳng định được uy tín với hơn 50.000 học viên là người đi làm, học sinh, sinh viên và doanh nghiệp.'
+  intro: 'Trung tâm Đồ Họa Thực Chiến là đơn vị đào tạo thiết kế đồ họa 2D, 3D, kiến trúc nội thất và tin học văn phòng thực chiến hàng đầu tại TP.HCM. Với phương châm đào tạo thực hành cầm tay chỉ việc 1 kèm 1, học viên được trực tiếp xử lý các dự án thực tế và tự tin đi làm ngay sau khóa học.'
 };
 
 export const COURSE_TABS = [
@@ -37,9 +37,9 @@ export const COURSES_DATA: Course[] = [
     id: 'c-thvp-ud',
     tab: 'tab1',
     categoryName: 'Tin học văn phòng',
-    title: 'Tin Học Văn Phòng Ứng Dụng',
-    desc: 'Trang bị kỹ năng Word, Excel, PowerPoint thực chiến cho người đi làm.',
-    img: 'https://blogdaytinhoc.com/images/khoa-hoc/tin-hoc-van-phong-ung-dung.jpg',
+    title: 'Khóa Học Tin Học Văn Phòng Cho Người Đi Làm',
+    desc: 'Chưa biết gì vẫn học được, học nhanh cấp tốc, thời gian linh động sáng - chiều - tối.',
+    img: '/images/lop-hoc-4.jpg',
     href: '/danh-muc/tin-hoc-van-phong',
     price: '1.200.000đ',
     duration: '1.5 tháng (18 buổi)',
@@ -197,67 +197,131 @@ export const COURSES_DATA: Course[] = [
     studentsCount: 920
   },
   {
-    id: 'c-ktv-noithat',
+    id: 'c-noi-that-thuc-chien',
     tab: 'tab2',
     categoryName: 'Thiết kế Vẽ kỹ thuật',
-    title: 'Kỹ Thuật Viên Thiết Kế Nội Thất',
-    desc: 'Combo AutoCAD + 3Ds Max + SketchUp triển khai hồ sơ thi công hoàn chỉnh.',
-    img: 'https://blogdaytinhoc.com/images/khoa-hoc/ky-thuat-vien-thiet-ke-noi-that.jpg',
+    title: 'Khóa Học Thiết Kế Nội Thất Thực Chiến',
+    desc: 'AutoCAD, SketchUp - Vray, 3Ds Max - Vray, Xuất File ABF, hậu kỳ Photoshop, bóc tách hồ sơ chi tiết.',
+    img: '/images/khoa-hoc-7.jpg',
     href: '/danh-muc/sketchup',
-    price: '4.500.000đ',
-    duration: '3 tháng',
-    studentsCount: 1140
+    price: '3.500.000đ',
+    duration: '2.5 tháng',
+    studentsCount: 2150,
+    featured: true
+  },
+  {
+    id: 'c-showroom-3d',
+    tab: 'tab2',
+    categoryName: 'Thiết kế Vẽ kỹ thuật',
+    title: 'Thiết Kế 3D Showroom & Công Trình Thực Tế',
+    desc: 'Dựng phối cảnh 3D showroom bán lẻ (như Mắt Kính BV Sài Gòn), xuất bản vẽ thi công hoàn chỉnh.',
+    img: '/images/khoa-hoc-6.jpg',
+    href: '/danh-muc/sketchup',
+    price: '2.800.000đ',
+    duration: '20 buổi',
+    studentsCount: 1420
+  },
+  {
+    id: 'c-biet-thu-3d',
+    tab: 'tab2',
+    categoryName: 'Thiết kế Vẽ kỹ thuật',
+    title: 'Dựng Phối Cảnh Biệt Thự 3D Nghỉ Dưỡng & Hồ Bơi',
+    desc: 'Dựng hình 3Ds Max & SketchUp kết hợp Vray render chất lượng điện ảnh, ánh sáng ngoại thất chân thực.',
+    img: '/images/3d.jpg',
+    href: '/danh-muc/sketchup',
+    price: '3.200.000đ',
+    duration: '24 buổi',
+    studentsCount: 1680,
+    featured: true
   },
 
   // Tab 3: Thiết Kế Đồ Họa
   {
-    id: 'c-pts',
+    id: 'c-pts-chien',
     tab: 'tab3',
     categoryName: 'Thiết kế đồ họa',
-    title: 'Photoshop Chỉnh Sửa Ảnh Chuyên Nghiệp',
-    desc: 'Cắt ghép, phục chế ảnh, thiết kế banner quảng cáo, poster, ấn phẩm mạng xã hội.',
-    img: 'https://blogdaytinhoc.com/images/khoa-hoc/photoshop.jpg',
+    title: 'Khóa Học Photoshop [ Thực Hành Thực Chiến ]',
+    desc: 'Học phí khuyến mãi chỉ từ 1.000.000đ. Cầm tay chỉ việc 1 kèm 1, tặng trọn bộ tài nguyên thiết kế.',
+    img: '/images/khoa-hoc.jpg',
     href: '/danh-muc/tu-hoc-photoshop',
-    price: '1.500.000đ',
+    price: '1.000.000đ',
     duration: '14 buổi',
-    studentsCount: 2950,
+    studentsCount: 4250,
     featured: true
   },
   {
-    id: 'c-ai-illu',
+    id: 'c-pts-chuyen-gia',
     tab: 'tab3',
     categoryName: 'Thiết kế đồ họa',
-    title: 'Adobe Illustrator (AI) Đồ Họa Vector',
-    desc: 'Thiết kế logo, bộ nhận diện thương hiệu, bao bì, catalogue, minh họa vector.',
-    img: 'https://blogdaytinhoc.com/images/khoa-hoc/illustrator-ai.jpg',
+    title: 'Khóa Học Photoshop - Biến Bạn Thành Chuyên Gia Thiết Kế',
+    desc: 'Cắt ghép chuyên sâu, blend màu sắc, chỉnh sửa ảnh cưới, ảnh sản phẩm bán hàng TMĐT chuyên nghiệp.',
+    img: '/images/khoa-hoc-1.jpg',
     href: '/danh-muc/tu-hoc-photoshop',
-    price: '1.600.000đ',
+    price: '1.200.000đ',
     duration: '14 buổi',
-    studentsCount: 2340
+    studentsCount: 3120
   },
   {
-    id: 'c-corel',
+    id: 'c-ai-in-an',
     tab: 'tab3',
     categoryName: 'Thiết kế đồ họa',
-    title: 'Thiết Kế Đồ Họa & In Ấn CorelDraw',
-    desc: 'Chuyên dụng cho ngành in ấn quảng cáo, làm biển hiệu, khắc laser, cắt decal.',
-    img: 'https://blogdaytinhoc.com/images/khoa-hoc/coreldraw.jpg',
+    title: 'Khóa Học Illustrator (Ai) Chuyên In Ấn - Học Là Làm Được',
+    desc: 'Cầm tay chỉ việc! Thiết kế namecard, hộp giấy, nhãn mác, bao bì, tờ rơi, catalogue chuẩn hệ màu CMYK.',
+    img: '/images/khoa-hoc-3.jpg',
     href: '/danh-muc/tu-hoc-photoshop',
     price: '1.400.000đ',
-    duration: '12 buổi',
-    studentsCount: 1390
+    duration: '14 buổi',
+    studentsCount: 3480,
+    featured: true
   },
   {
-    id: 'c-canva',
+    id: 'c-designer-0',
     tab: 'tab3',
     categoryName: 'Thiết kế đồ họa',
-    title: 'Thiết Kế Truyền Thông Đa Kênh Với Canva Pro',
-    desc: 'Thiết kế nhanh chóng cho Marketing, bán hàng online, Reels, TikTok video.',
-    img: 'https://blogdaytinhoc.com/images/khoa-hoc/thiet-ke-canva.jpg',
+    title: 'Trở Thành Designer Chuyên Nghiệp Từ Số 0',
+    desc: 'Lộ trình bài bản thiết kế Banner, Poster, Menu, Backdrop, Standee, ứng dụng AI tăng tốc thiết kế.',
+    img: '/images/khoa-hoc-4.jpg',
     href: '/danh-muc/tu-hoc-photoshop',
-    price: '800.000đ',
-    duration: '6 buổi',
-    studentsCount: 1890
+    price: '1.800.000đ',
+    duration: '1.5 tháng',
+    studentsCount: 2890,
+    featured: true
+  },
+  {
+    id: 'c-bang-hieu',
+    tab: 'tab3',
+    categoryName: 'Thiết kế đồ họa',
+    title: 'Thiết Kế Bảng Hiệu Quảng Cáo, In Ấn 2D, 3D',
+    desc: 'Thực chiến thiết kế biển hiệu quảng cáo, alu, mica chữ nổi, hộp đèn như Nha Khoa Sài Gòn Smile.',
+    img: '/images/khoa-hoc-2.jpg',
+    href: '/danh-muc/tu-hoc-photoshop',
+    price: '2.000.000đ',
+    duration: '16 buổi',
+    studentsCount: 1950
+  },
+  {
+    id: 'c-branding-design',
+    tab: 'tab3',
+    categoryName: 'Thiết kế đồ họa',
+    title: 'Thiết Kế Bộ Nhận Diện Thương Hiệu Chuyên Nghiệp',
+    desc: 'Quy chuẩn logo, hệ thống nhận diện văn phòng, bao bì ấn phẩm truyền thông đa kênh.',
+    img: '/images/design.jpg',
+    href: '/danh-muc/tu-hoc-photoshop',
+    price: '1.600.000đ',
+    duration: '12 buổi',
+    studentsCount: 2130
+  },
+  {
+    id: 'c-pts-ky-xao',
+    tab: 'tab3',
+    categoryName: 'Thiết kế đồ họa',
+    title: 'Kỹ Xảo Hiệu Ứng Ánh Sáng & Nghệ Thuật Photoshop Master',
+    desc: 'Thực hành xử lý ánh sáng nghệ thuật, kỹ xảo hạt ánh kim, khói lửa và poster phim chuyên nghiệp.',
+    img: '/images/photoshop.jpg',
+    href: '/danh-muc/tu-hoc-photoshop',
+    price: '1.500.000đ',
+    duration: '12 buổi',
+    studentsCount: 1780
   },
 
   // Tab 4: Tin Học Trẻ Em
@@ -385,51 +449,51 @@ export const COURSES_DATA: Course[] = [
 export const TEACHERS_DATA: Teacher[] = [
   {
     id: 't-1',
-    name: 'Thầy Bạch Hiến',
-    role: 'Tin học văn phòng & AI',
-    bio: 'Chuyên gia đào tạo tin học và ứng dụng AI cho cá nhân, doanh nghiệp. Phương pháp giảng dạy thực tế, dễ hiểu, giúp học viên áp dụng ngay vào công việc.',
-    exp: '12 năm kinh nghiệm',
-    photo: 'https://blogdaytinhoc.com/images/giao-vien/thay-bach-hien-giao-vien-day-tin-hoc-va-ung-dung-ai.jpg'
+    name: 'Thầy Hoàng Đô',
+    role: 'Giảng Viên Đồ Họa & Photoshop Thực Chiến',
+    bio: 'Hơn 10 năm kinh nghiệm trong ngành in ấn quảng cáo và thiết kế thương hiệu. Đào tạo phương pháp kèm 1-1 giúp học viên làm chủ nghề nhanh nhất.',
+    exp: '10+ năm kinh nghiệm',
+    photo: '/images/giao-vien1.jpg'
   },
   {
     id: 't-2',
-    name: 'Cô Thiều Hồng',
-    role: 'Kế toán thực hành',
-    bio: 'Từng có 10 năm giữ chức vụ Kế toán trưởng doanh nghiệp, hướng dẫn kế toán thuế & tổng hợp thực tế theo chứng từ thực.',
-    exp: '10 năm kinh nghiệm',
-    photo: 'https://blogdaytinhoc.com/images/giao-vien/co-thieu-hong-giao-vien-dao-tao-ke-toan.jpg'
+    name: 'Giảng Viên Kèm Cặp 1-1',
+    role: 'Phương Pháp Cầm Tay Chỉ Việc',
+    bio: 'Trực tiếp hướng dẫn thao tác trên máy tính của học viên, giải đáp tức thì và sửa bài thực tế đến khi thành thạo.',
+    exp: '8 năm kinh nghiệm',
+    photo: '/images/khoa-hoc-5.jpg'
   },
   {
     id: 't-3',
-    name: 'Thầy Đỗ Văn Thao',
-    role: 'AutoCAD & Thiết Kế Kỹ Thuật',
-    bio: 'Kỹ sư cơ khí giàu kinh nghiệm thiết kế khuôn mẫu, bản vẽ kỹ thuật nhà xưởng và chuyển giao công nghệ gia công CNC.',
-    exp: '11 năm kinh nghiệm',
-    photo: 'https://blogdaytinhoc.com/images/giao-vien/thay-do-van-thao-giao-vien-day-ve-cad.jpg'
+    name: 'Thầy Hướng Dẫn Tin Học Thế Hệ Mới',
+    role: 'Tin Học Văn Phòng Cho Người Đi Làm',
+    bio: 'Kiên nhẫn, tận tâm, giúp học viên chưa biết gì về máy tính cũng có thể soạn thảo văn bản và lập bảng tính Excel thuần thục.',
+    exp: '9 năm kinh nghiệm',
+    photo: '/images/lop-hoc-3.jpg'
   },
   {
     id: 't-4',
-    name: 'Cô Nguyễn Thị Ngọc',
-    role: 'MOS & Tin Học Văn Phòng',
-    bio: 'Chứng chỉ Microsoft Office Specialist Master. Đã huấn luyện hơn 4.000 sinh viên và nhân viên văn phòng thi đỗ chứng chỉ điểm tuyệt đối.',
-    exp: '8 năm kinh nghiệm',
-    photo: 'https://blogdaytinhoc.com/images/giao-vien/co-nguyen-thi-ngoc-giao-vien-day-tin-hoc-van-phong.jpg'
+    name: 'Giảng Viên Thiết Kế Nội Thất 3D',
+    role: 'AutoCAD, SketchUp & 3Ds Max',
+    bio: 'Chuyên gia dựng hình phối cảnh không gian nội ngoại thất, hướng dẫn kỹ năng bóc tách khối lượng và xuất file ABF xưởng mộc.',
+    exp: '7 năm kinh nghiệm',
+    photo: '/images/lop-hoc-2.jpg'
   },
   {
     id: 't-5',
-    name: 'Thầy Trần Hoàng Nam',
-    role: 'Thiết Kế Đồ Họa & 3D',
-    bio: 'Giảng viên chuyên ngành mỹ thuật đa phương tiện, chuyên sâu Photoshop, Illustrator, Premiere và dựng hình kiến trúc nội thất.',
-    exp: '9 năm kinh nghiệm',
-    photo: 'https://blogdaytinhoc.com/images/giao-vien/thay-tran-hoang-nam-giao-vien-day-thiet-ke-do-hoa.jpg'
+    name: 'Đội Ngũ Hỗ Trợ Đồ Án Nhóm',
+    role: 'Hỗ Trợ Thực Hành & Dự Án Thực Tế',
+    bio: 'Chia sẻ kinh nghiệm làm dự án thật cho khách hàng, hỗ trợ học viên hoàn thành đồ án tốt nghiệp xuất sắc.',
+    exp: '6 năm kinh nghiệm',
+    photo: '/images/lop-hoc-1.jpg'
   },
   {
     id: 't-6',
-    name: 'Cô Lê Thu Trang',
-    role: 'Tin Học Trẻ Em & Lập Trình',
-    bio: 'Nhiệt tình, tâm lý, phương pháp dạy thông qua trò chơi và dự án sáng tạo giúp các bé thích thú khám phá công nghệ sớm.',
-    exp: '7 năm kinh nghiệm',
-    photo: 'https://blogdaytinhoc.com/images/giao-vien/co-le-thu-trang-giao-vien-day-tin-hoc-quoc-te-mos.jpg'
+    name: 'Lớp Học Ca Tối & Cuối Tuần',
+    role: 'Đào Tạo Thực Hành Máy Tính',
+    bio: 'Phòng máy cấu hình cao, không khí học tập tích cực, linh động thời gian tối đa cho người bận rộn.',
+    exp: 'Đào Tạo Hàng Ngày',
+    photo: '/images/89358601_3102997763154329_5568130211104423936_n.jpg'
   }
 ];
 
@@ -487,22 +551,22 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
 export const LOCATIONS_DATA: LocationInfo[] = [
   {
     num: '1',
-    title: 'Tp.HCM - Trụ sở Bình Thạnh',
-    address: 'Tầng 1, Số 193 Đ. Nguyễn Xí, Phường 26, Quận Bình Thạnh, TP. Hồ Chí Minh',
+    title: 'Tp.HCM - Cơ Sở Chính Hiệp Thành',
+    address: '362/6/17 Hiệp Thành 13, Phường Tân Thới Hiệp, Quận 12, TP. Hồ Chí Minh',
     phone: '0938.636.843',
     city: 'TP.HCM'
   },
   {
     num: '2',
-    title: 'Tp.HCM - Chi nhánh Quận 7',
-    address: 'Căn hộ Florita Quận 7, Khu đô thị Him Lam, Phường Tân Hưng, Quận 7, TP.HCM',
+    title: 'Tp.HCM - Cơ Sở Đông Bắc',
+    address: '93 Đông Bắc, Phường Tân Chánh Hiệp, Quận 12, TP. Hồ Chí Minh',
     phone: '0337.590.737',
     city: 'TP.HCM'
   },
   {
     num: '3',
-    title: 'Tp.HCM - Chi nhánh Chu Văn An',
-    address: 'Số 49 Đường số 3, Cư xá Chu Văn An, Phường 26, Quận Bình Thạnh, TP.HCM',
+    title: 'Tp.HCM - Cơ Sở Tân Thới Hiệp',
+    address: '7/16 Tân Thới Hiệp, Quận 12, TP. Hồ Chí Minh',
     phone: '0938.636.843',
     city: 'TP.HCM'
   },
