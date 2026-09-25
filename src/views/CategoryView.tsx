@@ -64,7 +64,7 @@ export const CategoryView: React.FC<CategoryViewProps> = ({
     description: `Khám phá các khóa học và bài viết hướng dẫn thực hành ${categoryName} chất lượng cao tại Đồ Họa Thực Chiến. Kèm 1-1, học là làm được ngay.`,
     type: 'website',
     keywords: [categoryName, 'học thiết kế', 'đồ họa thực chiến', 'đào tạo cấp tốc'],
-    url: typeof window !== 'undefined' ? `${window.location.origin}/#/danh-muc/${categorySlug}` : undefined
+    url: typeof window !== 'undefined' ? `${window.location.origin}/danh-muc/${categorySlug}` : undefined
   });
 
   return (

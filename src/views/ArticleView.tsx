@@ -42,7 +42,7 @@ export const ArticleView: React.FC<ArticleViewProps> = ({
     type: 'article',
     article: article,
     keywords: article.tags,
-    url: typeof window !== 'undefined' ? `${window.location.origin}/#/bai-viet/${article.slug}` : undefined,
+    url: typeof window !== 'undefined' ? `${window.location.origin}/bai-viet/${article.slug}` : undefined,
   });
 
   // Comment state

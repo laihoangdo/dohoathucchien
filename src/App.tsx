@@ -10,7 +10,7 @@ import { AboutView } from './views/AboutView';
 import { ContactView } from './views/ContactView';
 import { AdminView } from './views/AdminView';
 
-// Helper to determine the current path from hash, search (SPA redirect), or pathname
+// Helper to determine the current path from pathname, search (SPA redirect), or hash
 function getCurrentPath(): string {
   // 1. Check admin route explicitly in pathname, hash, or search
   if (
@@ -25,18 +25,30 @@ function getCurrentPath(): string {
   const params = new URLSearchParams(window.location.search);
   const pParam = params.get('p');
   if (pParam) {
-    return pParam.startsWith('/') ? pParam : `/${pParam}`;
+    const clean = pParam.startsWith('/') ? pParam : `/${pParam}`;
+    try {
+      window.history.replaceState(null, '', clean);
+    } catch {
+      // ignore
+    }
+    return clean;
   }
 
-  // 3. Check hash route: #/route
+  // 3. Backward compatibility: if incoming URL has #/route, cleanly convert to /route
   if (window.location.hash) {
     const hash = window.location.hash.replace(/^#/, '');
-    if (hash) {
-      return hash.startsWith('/') ? hash : `/${hash}`;
+    if (hash && hash !== '/') {
+      const clean = hash.startsWith('/') ? hash : `/${hash}`;
+      try {
+        window.history.replaceState(null, '', clean);
+      } catch {
+        // ignore
+      }
+      return clean;
     }
   }
 
-  // 4. Check pathname
+  // 4. Standard clean pathname
   const path = window.location.pathname;
   return path || '/';
 }
@@ -60,19 +72,17 @@ export default function App() {
     };
   }, []);
 
-  // Navigation handler
+  // Clean navigation handler (standard clean URLs without #)
   const handleNavigate = (path: string) => {
     let cleanPath = path;
     if (!cleanPath.startsWith('/')) {
       cleanPath = `/${cleanPath}`;
     }
 
-    // Update URL hash for flawless GitHub Pages static hosting
-    window.location.hash = cleanPath;
     try {
-      window.history.pushState(null, '', `#${cleanPath}`);
+      window.history.pushState(null, '', cleanPath);
     } catch {
-      // Fallback if browser sandboxes pushState
+      window.location.hash = cleanPath;
     }
     setCurrentPath(cleanPath);
     window.scrollTo({ top: 0, behavior: 'smooth' });
