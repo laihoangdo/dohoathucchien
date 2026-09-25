@@ -40,7 +40,7 @@ export const SafeImage: React.FC<SafeImageProps> = ({
         </div>
 
         <span className="relative z-10 text-[11px] text-blue-200/70 mt-1 font-mono">
-          dohoathehemoi.com
+          dohoathucchien.com
         </span>
       </div>
     );

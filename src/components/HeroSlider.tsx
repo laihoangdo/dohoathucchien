@@ -157,7 +157,7 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({ onNavigate, onOpenRegist
                 />
                 <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent p-4">
                   <div className="text-white text-xs font-bold uppercase tracking-wider text-yellow-300">
-                    Đồ Họa Thực Chiến — dohoathehemoi.com
+                    Đồ Họa Thực Chiến — dohoathucchien.com
                   </div>
                   <div className="text-white text-sm font-semibold truncate">
                     Hotline: 0938.636.843 — Học 1 Kèm 1 Cầm Tay Chỉ Việc

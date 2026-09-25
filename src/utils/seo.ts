@@ -65,8 +65,8 @@ export function updateSEO(seo: SEOProps): void {
   const defaultImage = 'https://blogdaytinhoc.com/images/2024/8/1722958738_trung-tam-tin-hoc-sao-viet_big.jpg';
   const finalImage = seo.image || defaultImage;
   const finalType = seo.type || 'website';
-  const currentOrigin = typeof window !== 'undefined' ? window.location.origin : 'https://blogdaytinhoc.com';
-  const currentHref = typeof window !== 'undefined' ? window.location.href : 'https://blogdaytinhoc.com';
+  const currentOrigin = typeof window !== 'undefined' ? window.location.origin : 'https://dohoathucchien.com';
+  const currentHref = typeof window !== 'undefined' ? window.location.href : 'https://dohoathucchien.com';
   const finalUrl = seo.url || currentHref;
   const canonicalUrl = seo.canonicalUrl || finalUrl;
 

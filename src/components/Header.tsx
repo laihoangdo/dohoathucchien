@@ -100,7 +100,7 @@ export const Header: React.FC<HeaderProps> = ({
               ĐỒ HỌA THỰC CHIẾN
             </div>
             <div className="text-[11px] md:text-xs text-slate-600 font-semibold tracking-wider uppercase">
-              Blog Dạy Tin Học Thực Hành Chuyên Nghiệp
+              Dạy Tin Học Thực Hành Chuyên Nghiệp
             </div>
           </div>
         </div>

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+
+# Sitemaps
+Sitemap: https://dohoathucchien.com/sitemap.xml

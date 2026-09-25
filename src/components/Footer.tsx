@@ -32,7 +32,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   ĐỒ HỌA THỰC CHIẾN
                 </span>
                 <span className="text-[11px] text-blue-400 font-semibold tracking-wider uppercase block">
-                  Blog Dạy Tin Học Thực Hành
+                  Dạy Tin Học Thực Hành
                 </span>
               </div>
             </div>
@@ -66,7 +66,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
               <div className="flex items-center gap-2.5">
                 <Globe className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                <span className="text-slate-400">Website: https://blogdaytinhoc.com</span>
+                <a href={SITE_INFO.website} target="_blank" rel="noreferrer" className="text-slate-300 hover:text-white">
+                  Website: https://dohoathucchien.com
+                </a>
               </div>
             </div>
           </div>
